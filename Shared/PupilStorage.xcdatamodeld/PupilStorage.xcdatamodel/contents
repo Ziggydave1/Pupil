@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Alias" representedClassName="Alias" syncable="YES" codeGenerationType="class">
+        <attribute name="icon" attributeType="String" defaultValueString="studentdesk"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="links" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="AliasLink" inverseName="value" inverseEntity="AliasLink"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="AliasLink" representedClassName="AliasLink" syncable="YES" codeGenerationType="class">
+        <attribute name="key" attributeType="String"/>
+        <relationship name="value" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Alias" inverseName="links" inverseEntity="Alias"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="key"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>
