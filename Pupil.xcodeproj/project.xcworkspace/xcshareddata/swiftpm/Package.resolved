@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "defaults",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sindresorhus/Defaults",
+      "state" : {
+        "branch" : "main",
+        "revision" : "d71bfd8ffbf944ef08eacbca5fb96d6f69bf7696"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ecb18d8ce4d88277cc4fb103973352d91e18c535"
+      }
+    },
+    {
+      "identity" : "swiftvue",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StudentVue/SwiftVue.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ea1df44cd9230d0f8d59c73806b798f43054d2d7"
+      }
+    }
+  ],
+  "version" : 2
+}
