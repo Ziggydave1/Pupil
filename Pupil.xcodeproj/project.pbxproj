@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		72011C5229B662300074F0EB /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5129B662300074F0EB /* ColorChooser.swift */; };
 		72011C5729B6DB690074F0EB /* SelectAliasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5629B6DB690074F0EB /* SelectAliasSheet.swift */; };
-		72011C5929B6DEDC0074F0EB /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5829B6DEDC0074F0EB /* Icons.swift */; };
 		7203732829B92BF1006D83BB /* AddAliasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732729B92BF1006D83BB /* AddAliasSheet.swift */; };
 		7203732A29BE61F5006D83BB /* SettingsAliasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732929BE61F5006D83BB /* SettingsAliasManager.swift */; };
 		7203732C29BE6545006D83BB /* IconInSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732B29BE6545006D83BB /* IconInSquare.swift */; };
@@ -35,13 +34,14 @@
 		725F077629E085F800416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
 		725F077729E0861A00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
 		725F077829E0861B00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
-		725F077929E35CBC00416E08 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5829B6DEDC0074F0EB /* Icons.swift */; };
-		725F077A29E35CBC00416E08 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5829B6DEDC0074F0EB /* Icons.swift */; };
 		72606EC2299C1B2A00CFB306 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC1299C1B2A00CFB306 /* HomeView.swift */; };
 		72606EC7299C281600CFB306 /* GradebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC6299C281600CFB306 /* GradebookView.swift */; };
 		72606EC9299D340A00CFB306 /* GradebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC8299D340A00CFB306 /* GradebookViewModel.swift */; };
 		72606ECB299D51AF00CFB306 /* CourseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECA299D51AF00CFB306 /* CourseRowView.swift */; };
 		72606ECD299D521E00CFB306 /* GradeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECC299D521E00CFB306 /* GradeColors.swift */; };
+		72678C2F2ACDD28B0067D088 /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */; };
+		72678C302ACDD28B0067D088 /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */; };
+		72678C312ACDD28B0067D088 /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */; };
 		726B9A5729D55E8200E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5629D55E8200E72D7C /* KeychainAccess */; };
 		726B9A5929D55E9400E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5829D55E9400E72D7C /* KeychainAccess */; };
 		726B9A5B29D55E9B00E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5A29D55E9B00E72D7C /* KeychainAccess */; };
@@ -171,7 +171,6 @@
 /* Begin PBXFileReference section */
 		72011C5129B662300074F0EB /* ColorChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
 		72011C5629B6DB690074F0EB /* SelectAliasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAliasSheet.swift; sourceTree = "<group>"; };
-		72011C5829B6DEDC0074F0EB /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		7203732729B92BF1006D83BB /* AddAliasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAliasSheet.swift; sourceTree = "<group>"; };
 		7203732929BE61F5006D83BB /* SettingsAliasManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAliasManager.swift; sourceTree = "<group>"; };
 		7203732B29BE6545006D83BB /* IconInSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconInSquare.swift; sourceTree = "<group>"; };
@@ -195,6 +194,7 @@
 		72606EC8299D340A00CFB306 /* GradebookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookViewModel.swift; sourceTree = "<group>"; };
 		72606ECA299D51AF00CFB306 /* CourseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRowView.swift; sourceTree = "<group>"; };
 		72606ECC299D521E00CFB306 /* GradeColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeColors.swift; sourceTree = "<group>"; };
+		72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymbolPicker.swift; sourceTree = "<group>"; };
 		726C9960295D654B00EF919A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7270D5BD29B00FD000E8BF85 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		7270D5C529B0122E00E8BF85 /* BiometricAuthUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthUtility.swift; sourceTree = "<group>"; };
@@ -634,7 +634,6 @@
 				72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */,
 				725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */,
 				7270D5BD29B00FD000E8BF85 /* Config.swift */,
-				72011C5829B6DEDC0074F0EB /* Icons.swift */,
 				72FD394829D7A69500793D45 /* Extensions */,
 				72FD394929D7A6B100793D45 /* Utilities */,
 			);
@@ -658,6 +657,7 @@
 				72606ECC299D521E00CFB306 /* GradeColors.swift */,
 				725F076929E080BA00416E08 /* PersistenceController.swift */,
 				7240681C29DE786700D7ABE1 /* PreviewData.swift */,
+				72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -854,9 +854,9 @@
 				72B3034129D10077000399A1 /* CircularProgressView.swift in Sources */,
 				72FD394129D7A55B00793D45 /* Color.swift in Sources */,
 				72FD394329D7A55E00793D45 /* Defaults.swift in Sources */,
+				72678C302ACDD28B0067D088 /* SymbolPicker.swift in Sources */,
 				725F077729E0861A00416E08 /* PersistenceController.swift in Sources */,
 				72B3034429D100CB000399A1 /* CourseWidgetView.swift in Sources */,
-				725F077929E35CBC00416E08 /* Icons.swift in Sources */,
 				72B3038529D1393C000399A1 /* GradebookWidgetView.swift in Sources */,
 				72B3033A29D0FF02000399A1 /* WidgetIntents.intentdefinition in Sources */,
 				72B3037A29D108E5000399A1 /* Config.swift in Sources */,
@@ -871,10 +871,10 @@
 			files = (
 				7240681F29DE786700D7ABE1 /* PreviewData.swift in Sources */,
 				72B3036229D103FA000399A1 /* WidgetIntents.intentdefinition in Sources */,
-				725F077A29E35CBC00416E08 /* Icons.swift in Sources */,
 				72B3037B29D108E6000399A1 /* Config.swift in Sources */,
 				725F077829E0861B00416E08 /* PersistenceController.swift in Sources */,
 				725F077629E085F800416E08 /* PupilStorage.xcdatamodeld in Sources */,
+				72678C312ACDD28B0067D088 /* SymbolPicker.swift in Sources */,
 				72FD394229D7A55B00793D45 /* Color.swift in Sources */,
 				72FD394029D7A55800793D45 /* String.swift in Sources */,
 				72B3037529D108DC000399A1 /* GradeColors.swift in Sources */,
@@ -893,6 +893,7 @@
 				7203732829B92BF1006D83BB /* AddAliasSheet.swift in Sources */,
 				72CA72D529E4D3DE0009ABB2 /* AccentColorChooser.swift in Sources */,
 				7226AB9F293F014F0035E439 /* LoginView.swift in Sources */,
+				72678C2F2ACDD28B0067D088 /* SymbolPicker.swift in Sources */,
 				7226AB9A293EFE5C0035E439 /* DistrictRowView.swift in Sources */,
 				72606EC2299C1B2A00CFB306 /* HomeView.swift in Sources */,
 				721037D629CE6606007A64D4 /* UINavigationController.swift in Sources */,
@@ -920,7 +921,6 @@
 				725F077429E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */,
 				7203732A29BE61F5006D83BB /* SettingsAliasManager.swift in Sources */,
 				7270D5CE29B11C3F00E8BF85 /* Color.swift in Sources */,
-				72011C5929B6DEDC0074F0EB /* Icons.swift in Sources */,
 				72CA72D329E490FF0009ABB2 /* IconChooser.swift in Sources */,
 				72B3036329D103FE000399A1 /* WidgetIntents.intentdefinition in Sources */,
 				729C410029A2BFC8003AD7BC /* StudentViewModel.swift in Sources */,
@@ -1121,7 +1121,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1175,7 +1175,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1208,7 +1208,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1249,7 +1249,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
