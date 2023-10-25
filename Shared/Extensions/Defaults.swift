@@ -19,6 +19,7 @@ extension Defaults.Keys {
     static let courseList = Key<[String]>(UD_Course_List, default: [], suite: pupilGroupDefaults)
     static let accentColor = Key<Color>(UD_Accent_Color, default: .blue, suite: pupilGroupDefaults)
     static let accentColorName = Key<String>(UD_Accent_Color_Name, default: "Blue", suite: pupilGroupDefaults)
+    static let customIDPhoto = Key<Data?>(UD_Custom_ID_Photo, suite: pupilGroupDefaults)
 }
 
 extension DistrictInfo: Defaults.Serializable {
