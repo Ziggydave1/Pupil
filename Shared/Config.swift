@@ -15,6 +15,7 @@ let UD_Grade_Colors = "gradeColors"
 let UD_Course_List = "courseList"
 let UD_Accent_Color = "accentColor"
 let UD_Accent_Color_Name = "accentColorName"
+let UD_Custom_ID_Photo = "customIDPhoto"
 
 // Identifiers
 let Keychain_Group = "DFHG7N3Z6B.kaneshige.tech.pupil.keychain.group"
