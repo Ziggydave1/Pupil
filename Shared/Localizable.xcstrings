@@ -1,0 +1,2014 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "%@%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+
+    },
+    "ACCENT_COLOR_CHOOSER_NAV_TITLE" : {
+      "comment" : "Navigation title for the accent color chooser page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Accent Color"
+          }
+        }
+      }
+    },
+    "ADD_ALIAS_BUTTON" : {
+      "comment" : "Button to add an alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Add"
+          }
+        }
+      }
+    },
+    "ADDING_ALIAS_ERROR" : {
+      "comment" : "An error has occured adding the alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error adding alias"
+          }
+        }
+      }
+    },
+    "ADDING_ALIAS_ERROR_ACK" : {
+      "comment" : "Acknowledgement of an error that occured while adding an alias, does not do anything but dismiss",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "ALIAS_ADDER_NAME_FIELD" : {
+      "comment" : "Label for the name field when adding an alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "ALIAS_DESCRIPTION" : {
+      "comment" : "Description of what an alias is for new users",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "An alias is a name and icon you can assign to classes in your gradebook and schedule, making them easier to read and recognize.\n\nGet started by adding your first alias."
+          }
+        }
+      }
+    },
+    "ALIAS_EDITOR_NAME_FIELD" : {
+      "comment" : "Label for the name field when editing an alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "ALIASES_NAV_TITLE" : {
+      "comment" : "Navigation title for the page where someone can select an alias to use",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Aliases"
+          }
+        }
+      }
+    },
+    "APP_ICON_CHOOSER_NAV_TITLE" : {
+      "comment" : "Navigation title for the app icon chooser page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "App Icon"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_DATE" : {
+      "comment" : "The date assigned of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Date assigned"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_DESRIPTION" : {
+      "comment" : "The description of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Description"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_DUE" : {
+      "comment" : "The date due of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Date due"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_GRAPH_COUNT" : {
+      "comment" : "The count for the recent assignments shown on the graph",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Last %lld Assignments"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_GRAPH_TITLE" : {
+      "comment" : "Label for the title of the graph",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Recent Assignment Grades"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_GRAPH_X" : {
+      "comment" : "The index of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Index"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_GRAPH_Y" : {
+      "comment" : "The score of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Score"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_NAME" : {
+      "comment" : "The name of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_POINTS" : {
+      "comment" : "The points of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Points"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_SCORING" : {
+      "comment" : "The scoring type of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Scoring"
+          }
+        }
+      }
+    },
+    "ASSIGNMENT_TYPE" : {
+      "comment" : "The type of the assignment",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Type"
+          }
+        }
+      }
+    },
+    "ATTENDANCE_NAV_TITLE" : {
+      "comment" : "Navigation title for the attendance page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Attendance"
+          }
+        }
+      }
+    },
+    "BIOMETRIC_AUTH_REASON" : {
+      "comment" : "The reason given when asking the user to authenticate biometricly",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Authorization is required to unlock data"
+          }
+        }
+      }
+    },
+    "BLUE" : {
+      "comment" : "Name for blue",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Blue"
+          }
+        }
+      }
+    },
+    "BREAKDOWN_GRAPH_DATA_NAME" : {
+      "comment" : "The category name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "BREAKDOWN_GRAPH_X" : {
+      "comment" : "The weight of the grade category",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Weight"
+          }
+        }
+      }
+    },
+    "BREAKDOWN_NA" : {
+      "comment" : "An N/A value for a part of a grade breakdown category",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "N/A"
+          }
+        }
+      }
+    },
+    "BREAKDOWN_POINTS" : {
+      "comment" : "The points recieved out of the points possible for the category",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Points"
+          }
+        }
+      }
+    },
+    "BREAKDOWN_WEIGHT" : {
+      "comment" : "The weight the category is making out of the possible weight",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Weight"
+          }
+        }
+      }
+    },
+    "BROWN" : {
+      "comment" : "Name for brown",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Brown"
+          }
+        }
+      }
+    },
+    "CALL_BUTTON" : {
+      "comment" : "Button to call",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "CLEAR_ALL_ALIASES_BUTTON" : {
+      "comment" : "Clear all aliases",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clear All"
+          }
+        }
+      }
+    },
+    "CLEAR_ALL_ALIASES_CONFIRM_MSG" : {
+      "comment" : "Asking for confirmation to clear all aliases",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clear all aliases?"
+          }
+        }
+      }
+    },
+    "CLEAR_ALL_ALIASES_FINAL_BUTTON" : {
+      "comment" : "Button for the user to confirm that they want to clear all aliases",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Clear Aliases"
+          }
+        }
+      }
+    },
+    "COLOR_CHOOSER_COLOR_STOP" : {
+      "comment" : "One of the colors to choose for the grade colors",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Color"
+          }
+        }
+      }
+    },
+    "COLOR_CHOOSER_DEFAULT_COLOR" : {
+      "comment" : "The default color for grade colors",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Default Color"
+          }
+        }
+      }
+    },
+    "COMPOSE_EMAIL_BUTTON" : {
+      "comment" : "Button to compose an email",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Compose Email"
+          }
+        }
+      }
+    },
+    "COPY_EMAIL_BUTTON" : {
+      "comment" : "Button to copy an email address",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Copy Email"
+          }
+        }
+      }
+    },
+    "COURSE_ASSIGNMENTS_OR_BREAKDOWN_PICKER" : {
+      "comment" : "Label for the picker to switch between viewing assignments and the grade breakdown",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Section"
+          }
+        }
+      }
+    },
+    "COURSE_ASSIGNMENTS_SECTION" : {
+      "comment" : "The assignments option for the section picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Assignments"
+          }
+        }
+      }
+    },
+    "COURSE_BREAKDOWN_SECTION" : {
+      "comment" : "The breakdown option for the section picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Breakdown"
+          }
+        }
+      }
+    },
+    "COURSE_EDIT_BUTTON" : {
+      "comment" : "Button to pull up the alias picker when wanting to customize a course",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Edit"
+          }
+        }
+      }
+    },
+    "COURSE_INFO_ROOM" : {
+      "comment" : "The room number of the course",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Room"
+          }
+        }
+      }
+    },
+    "COURSE_INFO_SECTION_HEADER" : {
+      "comment" : "The section header for the course info",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "COURSE_INFO_STAFF_EMAIL" : {
+      "comment" : "The email of the teacher of the course",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "COURSE_INFO_TEACHER" : {
+      "comment" : "The teacher of the course",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Teacher"
+          }
+        }
+      }
+    },
+    "COURSE_MARK_PICKER" : {
+      "comment" : "Label for the mark picker in a course",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mark"
+          }
+        }
+      }
+    },
+    "COURSE_ROW_STAFF_ROOM_INFO" : {
+      "comment" : "The room number and name of the teacher for a class",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ | Room %2$@"
+          }
+        }
+      }
+    },
+    "COURSE_SORT_ASSIGNMENTS_MENU" : {
+      "comment" : "Shows the sorting options for the assignment list",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sort"
+          }
+        }
+      }
+    },
+    "COURSE_SORT_KET_PICKER" : {
+      "comment" : "Picker to choose what to sort assignments by",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sort by"
+          }
+        }
+      }
+    },
+    "COURSE_SORT_ORDER_FORWARD" : {
+      "comment" : "Forward sorting direction",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Forward"
+          }
+        }
+      }
+    },
+    "COURSE_SORT_ORDER_PICKER" : {
+      "comment" : "Picker to choose the direction of sorting",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Order"
+          }
+        }
+      }
+    },
+    "COURSE_SORT_ORDER_REVERSE" : {
+      "comment" : "Reverse sorting direction",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reverse"
+          }
+        }
+      }
+    },
+    "CYAN" : {
+      "comment" : "Name for cyan",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Cyan"
+          }
+        }
+      }
+    },
+    "DISTRICT_FINDER_ZIP" : {
+      "comment" : "The zip code field",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Zip Code"
+          }
+        }
+      }
+    },
+    "DOCTORS_DENTIST_LABEL" : {
+      "comment" : "Dentist label for the doctors page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Dentist"
+          }
+        }
+      }
+    },
+    "DOCTORS_PHYSICAIN_LABEL" : {
+      "comment" : "Physician label for the doctors page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Physician"
+          }
+        }
+      }
+    },
+    "DONE_EDITING_ALIAS_BUTTON" : {
+      "comment" : "Button to save an edited alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Done"
+          }
+        }
+      }
+    },
+    "EDITING_ALIAS_ERROR" : {
+      "comment" : "An error has occured editing the alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error editing alias"
+          }
+        }
+      }
+    },
+    "EDITING_ALIAS_ERROR_ACK" : {
+      "comment" : "Acknowledgement of an error that occured while editing an alias, does not do anything but dismiss",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "EMAIL_BUTTON" : {
+      "comment" : "Button to email",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_HOME_PHONE" : {
+      "comment" : "The home phone number for the emergency contact",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@ - Home"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_MOBILE_PHONE" : {
+      "comment" : "The mobile phone number for the emergency contact",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@ - Mobile"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_OTHER_PHONE" : {
+      "comment" : "The other phone number for the emergency contact",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@ - Other"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_WORK_PHONE" : {
+      "comment" : "The work phone number for the emergency contact",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@ - Work"
+          }
+        }
+      }
+    },
+    "FIND_YOUR_DISTRICT_NAV_TITLE" : {
+      "comment" : "Navigation title for the district picker to instruct the user on what to do",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Find Your District"
+          }
+        }
+      }
+    },
+    "GIVE_ALIAS_BUTTON" : {
+      "comment" : "Button to show the alias picker and give an alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Give alias"
+          }
+        }
+      }
+    },
+    "GRADE_COLOR_CHOOSER_NAV_TITLE" : {
+      "comment" : "Navigation title for the grade color chooser page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grade Colors"
+          }
+        }
+      }
+    },
+    "GRADE_COLOR_CHOOSER_RESET" : {
+      "comment" : "Button to reset the grade colors to default",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reset"
+          }
+        }
+      }
+    },
+    "GRADE_COLOR_CHOOSER_SAVE" : {
+      "comment" : "Button to save changes to the grade colors",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "GRADEBOOK_GRADING_PERIOD_PICKER" : {
+      "comment" : "The label for the grading period picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grading Period"
+          }
+        }
+      }
+    },
+    "GRADEBOOK_NAV_TITLE" : {
+      "comment" : "Navigation title for the gradebook page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Gradebook"
+          }
+        }
+      }
+    },
+    "GRAY" : {
+      "comment" : "Name for gray",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Gray"
+          }
+        }
+      }
+    },
+    "GREEN" : {
+      "comment" : "Name for green",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Green"
+          }
+        }
+      }
+    },
+    "HOME_TAB_GRADEBOOK" : {
+      "comment" : "The gradebook tab",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Gradebook"
+          }
+        }
+      }
+    },
+    "HOME_TAB_SCHEDULE" : {
+      "comment" : "The schedule tab",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schedule"
+          }
+        }
+      }
+    },
+    "HOME_TAB_SETTINGS" : {
+      "comment" : "The settings tab",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "HOME_TAB_STUDENT_INFO" : {
+      "comment" : "The me (student info) tab",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Me"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_ARTS" : {
+      "comment" : "Section for arts icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Arts"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_GENERAL" : {
+      "comment" : "Section for general icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "General"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_MATH" : {
+      "comment" : "Section for math icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Math"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_OTHER" : {
+      "comment" : "Section for other icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Other"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_SCIENCE" : {
+      "comment" : "Section for science icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Science"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_SOCIALSTUDIES" : {
+      "comment" : "Section for social studies icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Social Studies"
+          }
+        }
+      }
+    },
+    "ICON_LIST_SECTION_TITLE_TECHNOLOGY" : {
+      "comment" : "Section for technology icons in the alias icon picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Technology"
+          }
+        }
+      }
+    },
+    "ID_CARD_BAR_CODE_TYPE" : {
+      "comment" : "The bar code type of id card display",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Bar code"
+          }
+        }
+      }
+    },
+    "ID_CARD_QR_CODE_TYPE" : {
+      "comment" : "The qr code type of id card display",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "QR code"
+          }
+        }
+      }
+    },
+    "ID_CARD_ROW_SUBTITLE" : {
+      "comment" : "Subtitle for the id card row in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "View ID Card"
+          }
+        }
+      }
+    },
+    "ID_CARD_SHOW_CUSTOM_PHOTO_BUTTON" : {
+      "comment" : "Button to show the custom id card photo",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show custom photo"
+          }
+        }
+      }
+    },
+    "ID_CARD_SHOW_ORIGINAL_PHOTO_BUTTON" : {
+      "comment" : "Button to show the original id card photo",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Show original photo"
+          }
+        }
+      }
+    },
+    "ID_CARD_TYPE_PICKER_TITLE" : {
+      "comment" : "Picker title for the ID card type (barcode or qr code)",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "ID type"
+          }
+        }
+      }
+    },
+    "ID_CARD_USER_GRADE" : {
+      "comment" : "The current grade of the user",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grade %@"
+          }
+        }
+      }
+    },
+    "INDIGO" : {
+      "comment" : "Name for indigo",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Indigo"
+          }
+        }
+      }
+    },
+    "LIGHT_BLUE" : {
+      "comment" : "Name for light blue",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Light Blue"
+          }
+        }
+      }
+    },
+    "LOG_OUT_BUTTON_TEXT" : {
+      "comment" : "Log out button text",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Log Out"
+          }
+        }
+      }
+    },
+    "LOGIN_DONT_SAVE_CRED" : {
+      "comment" : "Button to say no to saving credentials",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No thanks"
+          }
+        }
+      }
+    },
+    "LOGIN_PASSWORD" : {
+      "comment" : "The password field",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Password"
+          }
+        }
+      }
+    },
+    "LOGIN_SAVE_CRED" : {
+      "comment" : "Button to save the credentials of the user",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "LOGIN_SAVE_CRED_QUESTION" : {
+      "comment" : "Question if the user wants to save their credentials or not",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save Credentials?"
+          }
+        }
+      }
+    },
+    "LOGIN_SIGN_IN_BUTTON" : {
+      "comment" : "The sign in button",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sign In"
+          }
+        }
+      }
+    },
+    "LOGIN_USERNAME" : {
+      "comment" : "The username field",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Username"
+          }
+        }
+      }
+    },
+    "LOGIN_WELCOME_TEXT" : {
+      "comment" : "The welcome text for login",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Welcome!"
+          }
+        }
+      }
+    },
+    "LOGIN_WRONG_CRED" : {
+      "comment" : "The user has entered invalid credentials",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Invalid Username or Password"
+          }
+        }
+      }
+    },
+    "MINT" : {
+      "comment" : "Name for mint color",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mint"
+          }
+        }
+      }
+    },
+    "ORANGE" : {
+      "comment" : "Name for orange",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Orange"
+          }
+        }
+      }
+    },
+    "PINK" : {
+      "comment" : "Name for pink",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Pink"
+          }
+        }
+      }
+    },
+    "PLEASE_AUTHENTICATE_BUTTON" : {
+      "comment" : "Button to show the login screen because the user is not authenticated",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Please authenticate"
+          }
+        }
+      }
+    },
+    "PURPLE" : {
+      "comment" : "Name for purple",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Purple"
+          }
+        }
+      }
+    },
+    "RECENTLY_SEARCHED_DISTRICTS" : {
+      "comment" : "The recently searched section in the district list",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Recently Searched"
+          }
+        }
+      }
+    },
+    "RED" : {
+      "comment" : "Name for red",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Red"
+          }
+        }
+      }
+    },
+    "REMOVE_ALIAS_BUTTON" : {
+      "comment" : "Button to remove an alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Remove Alias"
+          }
+        }
+      }
+    },
+    "REMOVING_ALIAS_ERROR" : {
+      "comment" : "An error has occured removing the alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error removing alias"
+          }
+        }
+      }
+    },
+    "REMOVING_ALIAS_ERROR_ACK" : {
+      "comment" : "Acknowledgement of an error that occured while removing an alias, does not do anything but dismiss",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "SCHEDULE_NAV_TITLE" : {
+      "comment" : "Navigation title for the schedule page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schedule"
+          }
+        }
+      }
+    },
+    "SCHEDULE_NO_CLASSES" : {
+      "comment" : "The label to show if there are no classes scheduled at all",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No classes"
+          }
+        }
+      }
+    },
+    "SCHEDULE_NO_CLASSES_TODAY" : {
+      "comment" : "Label to show if there are no classes today",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No classes today"
+          }
+        }
+      }
+    },
+    "SCHEDULE_TERM_PICKER" : {
+      "comment" : "The label for the schedule term picker",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schedule Period"
+          }
+        }
+      }
+    },
+    "SCHEDULE_TERM_TYPE" : {
+      "comment" : "The term type of schedule",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Term"
+          }
+        }
+      }
+    },
+    "SCHEDULE_TERM_TYPE_SECTION_LABEL" : {
+      "comment" : "The section header label for the term schedule type",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Term Schedule"
+          }
+        }
+      }
+    },
+    "SCHEDULE_TODAY_TYPE" : {
+      "comment" : "The today type of schedule",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Today"
+          }
+        }
+      }
+    },
+    "SCHEDULE_TYPE_PICKER" : {
+      "comment" : "Picker for the schedule type",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schedule Type"
+          }
+        }
+      }
+    },
+    "SETTING_ALIAS_ERROR" : {
+      "comment" : "An error has occured setting the alias",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error setting alias"
+          }
+        }
+      }
+    },
+    "SETTING_ALIAS_ERROR_ACK" : {
+      "comment" : "Acknowledgement of an error that occured while setting an alias, does not do anything but dismiss",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "SETTING_NEW_ICON_ERROR" : {
+      "comment" : "An error occured while trying to change the icon for the app",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error setting new icon"
+          }
+        }
+      }
+    },
+    "SETTING_NEW_ICON_ERROR_ACK" : {
+      "comment" : "Acknowledgement of an error that occured while setting an icon for the app, does not do anything but dismiss",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Ok"
+          }
+        }
+      }
+    },
+    "SETTINGS_CONTACT_LINK" : {
+      "comment" : "Link to the website that has contact information",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Contact Us"
+          }
+        }
+      }
+    },
+    "SETTINGS_NAV_ACCENT_CHOOSER" : {
+      "comment" : "Navigation link to the accent color chooser page in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Accent Color"
+          }
+        }
+      }
+    },
+    "SETTINGS_NAV_ALIASES_MANAGER" : {
+      "comment" : "Navigation link to the alias manager page in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Class Names and Icons"
+          }
+        }
+      }
+    },
+    "SETTINGS_NAV_GRADE_COLORS_CHOOSER" : {
+      "comment" : "Navigation link to the grade color chooser page in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grade Colors"
+          }
+        }
+      }
+    },
+    "SETTINGS_NAV_ICON_CHOOSER" : {
+      "comment" : "Navigation link to the app icon chooser page in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "App Icon"
+          }
+        }
+      }
+    },
+    "SETTINGS_NAV_TITLE" : {
+      "comment" : "Navigation title for the settings page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "SETTINGS_OPEN_TO_TODAY_SCHEDULE_TOGGLE" : {
+      "comment" : "Toggle to control if the schedule opens to the today schedule or the term schedule",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Open to Today Schedule"
+          }
+        }
+      }
+    },
+    "SETTINGS_PRIVACY_POLICY_LINK" : {
+      "comment" : "Link to the website that has the privacy policy",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Privacy Policy"
+          }
+        }
+      }
+    },
+    "SETTINGS_SAVE_LOGIN_TOGGLE" : {
+      "comment" : "Toggle label for the user to enable their login to be saved",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Save Login - Enable %@"
+          }
+        }
+      }
+    },
+    "SETTINGS_SECTION_HEADER_CUSTOMIZATION" : {
+      "comment" : "List section header for the customization section in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Customization"
+          }
+        }
+      }
+    },
+    "SETTINGS_SECTION_HEADER_INFO" : {
+      "comment" : "List section header for the info section in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Info"
+          }
+        }
+      }
+    },
+    "SETTINGS_SECTION_HEADER_SCHEDULE" : {
+      "comment" : "List section header for the schedule section in settings",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Schedule"
+          }
+        }
+      }
+    },
+    "SORTING_KEY_ALPHA" : {
+      "comment" : "Sort assignments alphabetically",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Alphabetical"
+          }
+        }
+      }
+    },
+    "SORTING_KEY_DATE" : {
+      "comment" : "Sort assignments by date assigned",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Date Assigned"
+          }
+        }
+      }
+    },
+    "SORTING_KEY_DUE" : {
+      "comment" : "Sort assignments by date due",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Date Due"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_ADDRESS_LABEL" : {
+      "comment" : "Label for student address",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Address"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_BIRTH_LABEL" : {
+      "comment" : "Label for student birth date",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Birth Date"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_DOCTORS_LABEL" : {
+      "comment" : "Label for the doctors disclosure group",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Doctors"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_EMAIL_LABEL" : {
+      "comment" : "Label for student email",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Email"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_EMERGENCY_CONTACTS_LABEL" : {
+      "comment" : "Label for the emergency contacts disclosure group",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Emergency Contacts"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_GENDER_LABEL" : {
+      "comment" : "Label for student gender",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Gender"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_GRADE_LABEL" : {
+      "comment" : "Label for student grade",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grade"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_NAV_TITLE" : {
+      "comment" : "Navigation title for the student info page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Me"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_OTHER_LABEL" : {
+      "comment" : "Label for the other disclosure group",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Other"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_PHONE_LABEL" : {
+      "comment" : "Label for student phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Phone"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_SECTION_HEADER_BASICS" : {
+      "comment" : "The section header for basics in the student info page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Basics"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_SECTION_HEADER_DETAILS" : {
+      "comment" : "The section header fot details in the student info page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Details"
+          }
+        }
+      }
+    },
+    "TEAL" : {
+      "comment" : "Name for teal",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Teal"
+          }
+        }
+      }
+    },
+    "UNKNOWN_ALIAS" : {
+      "comment" : "A stored alias doesn't have a name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Unknown"
+          }
+        }
+      }
+    },
+    "WIDGET_DESC_CLASS_GRADES" : {
+      "comment" : "The description of the class grades widget",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "See your grades in a single class."
+          }
+        }
+      }
+    },
+    "WIDGET_DESC_GRADES" : {
+      "comment" : "Description of the grades widget",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "See your grades."
+          }
+        }
+      }
+    },
+    "WIDGET_ERROR_DISTRICT_URL_INVALID" : {
+      "comment" : "The users district url is invalid",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error loading district URL.\nPlease find your district again within Pupil."
+          }
+        }
+      }
+    },
+    "WIDGET_ERROR_LOGIN_NOT_SAVED" : {
+      "comment" : "The user credentials are not saved, which the widget requires to work",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Enable save login within Pupil to use this widget."
+          }
+        }
+      }
+    },
+    "WIDGET_ERROR_NO_CLASS_CHOSEN" : {
+      "comment" : "The user has not chosen a class to view the grades of",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Choose a class to display grades for.\nEdit the widget to continue."
+          }
+        }
+      }
+    },
+    "WIDGET_ERROR_UNABLE_TO_GET_PASSWORD" : {
+      "comment" : "The user password was unable to be retrieved",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Error retrieving user password.\nTry logging into the app."
+          }
+        }
+      }
+    },
+    "WIDGET_GRADES_NA" : {
+      "comment" : "Unable to parse the grades",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "N/A"
+          }
+        }
+      }
+    },
+    "WIDGET_GRADES_NA_FOUND" : {
+      "comment" : "Course grade is N/A",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "N/A"
+          }
+        }
+      }
+    },
+    "WIDGET_NAME_CLASS_GRADES" : {
+      "comment" : "The name of the class grades widget",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Class Grades"
+          }
+        }
+      }
+    },
+    "WIDGET_NAME_GRADES" : {
+      "comment" : "The name of the grades widget",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Grades"
+          }
+        }
+      }
+    },
+    "WIDGET_NO_GRADE_DATA" : {
+      "comment" : "The current widget entry has no gradebook data",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "No Grade Data"
+          }
+        }
+      }
+    },
+    "WIDGET_SIZE_NOT_IMPLEMENTED" : {
+      "comment" : "The selected widget size is not supported",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Not Implemented"
+          }
+        }
+      }
+    },
+    "YELLOW" : {
+      "comment" : "Name for yellow",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Yellow"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -20,11 +20,3 @@ struct CircularProgressView: View {
             .rotationEffect(.degrees(270))
     }
 }
-
-struct CircularProgressView_Previews: PreviewProvider {
-    static var previews: some View {
-        CircularProgressView(progress: 90, lineWidth: 10, color: .green)
-            .frame(width: 60, height: 60)
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
-}

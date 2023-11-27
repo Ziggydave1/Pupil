@@ -22,8 +22,8 @@ struct AddAliasSheet: View {
             
             SymbolPicker(icon: $icon)
         }
-        .alert("Error saving alias", isPresented: $showingAlert) {
-            Button("OK", role: .cancel) {
+        .alert(String(localized: "ADDING_ALIAS_ERROR", defaultValue: "Error adding alias", comment: "An error has occured adding the alias"), isPresented: $showingAlert) {
+            Button(String(localized: "ADDING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while adding an alias, does not do anything but dismiss"), role: .cancel) {
                 dismiss()
             }
         }
@@ -32,10 +32,11 @@ struct AddAliasSheet: View {
     var header: some View {
         HStack {
             Image(systemName: icon)
-                .font(.title3.weight(.semibold))
+                .font(.title3)
+                .fontWeight(.semibold)
                 .frame(minWidth: 35)
             
-            TextField("Name", text: $name)
+            TextField(String(localized: "ALIAS_ADDER_NAME_FIELD", defaultValue: "Name", comment: "Label for the name field when adding an alias"), text: $name)
                 .padding(10)
                 .background(Color(.systemGray5), in: .rect(cornerRadius: 12))
                 .overlay(alignment: .trailing) {
@@ -50,7 +51,7 @@ struct AddAliasSheet: View {
                     }
                 }
             
-            Button("Done") {
+            Button(String(localized: "ADD_ALIAS_BUTTON", defaultValue: "Add", comment: "Button to add an alias")) {
                 guard name.count > 0 else { return }
                 
                 let alias = Alias(context: viewContext)
@@ -73,9 +74,6 @@ struct AddAliasSheet: View {
     }
 }
 
-struct AddAliasSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        AddAliasSheet()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+#Preview("AddAliasSheet") {
+    AddAliasSheet()
 }

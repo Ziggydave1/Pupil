@@ -6,20 +6,15 @@
 //
 
 import SwiftUI
-import Defaults
 
 @main
 struct PupilApp: App {
-    @Default(.accentColor) var accentColor
-    let persistenceController = PersistenceController.shared
-    @StateObject private var vm = LoginViewModel()
+    private let persistenceController = PersistenceController.shared
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environmentObject(vm)
+            PupilView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .tint(accentColor)
         }
     }
 }
