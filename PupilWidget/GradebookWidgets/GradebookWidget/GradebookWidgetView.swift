@@ -10,7 +10,7 @@ import SwiftVue
 import WidgetKit
 import Defaults
 
-struct GradebookWidgetView : View {
+struct GradebookWidgetView: View {
     @Environment(\.widgetFamily) var family
     var entry: GradebookWidgetEntry
     
@@ -26,20 +26,13 @@ struct GradebookWidgetView : View {
                     case .systemLarge:
                         GradebookWidgetLarge(grades: grades)
                     default:
-                        Text("Not Implemented")
+                        Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented", comment: "The selected widget size is not supported"))
                     }
                 } else {
-                    Text("No Grade Data")
+                    Text(String(localized: "WIDGET_NO_GRADE_DATA", defaultValue: "No Grade Data", comment: "The current widget entry has no gradebook data"))
                 }
             }
         }
-    }
-}
-
-struct GradebookWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        GradebookWidgetView(entry: GradebookWidgetEntry(date: Date(), grades: PreviewData.instance.multiMarkGradebook, error: nil))
-            .previewContext(WidgetPreviewContext(family: .systemLarge))
     }
 }
 
@@ -65,12 +58,15 @@ struct GradebookWidgetLarge: View {
                     Spacer()
                     if let mark = course.marks.first {
                         Text(mark.scoreString)
-                            .font(.system(size: 22, weight: .bold, design: .rounded))
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .fontDesign(.rounded)
                             .foregroundColor(gradeColors.color(for: mark.scoreRaw, and: mark.scoreString))
                             .frame(minWidth: 45, alignment: .leading)
                     }
                 }
-                .font(.title3.weight(.medium))
+                .font(.title3)
+                .fontWeight(.medium)
             }
             if grades.courses.count < 7 {
                 Spacer()
@@ -86,6 +82,6 @@ struct GradebookWidgetLarge: View {
                 return String(format: "%g/%g", numerator, denominator)
             }
         }
-        return "N/A"
+        return String(localized: "WIDGET_GRADES_NA", defaultValue: "N/A", comment: "Unable to parse the grades")
     }
 }

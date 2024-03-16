@@ -15,101 +15,65 @@ struct AddAliasSheet: View {
     @State private var name: String = ""
     @State private var icon: String = "studentdesk"
     @State private var showingAlert: Bool = false
-    let columns = Array<GridItem>(repeating: GridItem(), count: 6)
-    let iconSet: [String: [String]] = iconList
     
     var body: some View {
         VStack {
-            HStack {
-                Image(systemName: icon)
-                    .font(.title3.weight(.semibold))
-                    .frame(minWidth: 35)
-                
-                HStack {
-                    TextField("Name", text: $name)
-                    
-                    if name != "" {
-                        Image(systemName: "xmark.circle.fill")
-                            .imageScale(.medium)
-                            .foregroundColor(Color(.systemGray2))
-                            .padding(3)
-                            .onTapGesture {
-                                withAnimation {
-                                    name = ""
-                                }
-                            }
-                    }
-                }
-                .frame(minHeight: 35)
-                .padding(.horizontal, 8)
-                .background(Color(.systemGray5))
-                .cornerRadius(12)
-                .padding(.vertical, 10)
-                
-                Button("Done") {
-                    if name.count > 0 {
-                        withAnimation {
-                            let alias = Alias(context: viewContext)
-                            alias.icon = icon
-                            alias.name = name
-                            
-                            if viewContext.hasChanges {
-                                do {
-                                    try viewContext.save()
-                                    dismiss()
-                                } catch {
-                                    showingAlert = true
-                                }
-                            }
-                        }
-                    }
-                    dismiss()
-                }
-            }
-            .padding(.horizontal)
-            .padding(.top, 5)
+            header
             
-            ScrollView {
-                LazyVGrid(columns: columns, alignment: .center, spacing: 0, pinnedViews: .sectionHeaders) {
-                    ForEach(iconSet.keys.sorted(), id: \.self) { category in
-                        Section {
-                            ForEach(iconSet[category] ?? [], id: \.self) { icon in
-                                Image(systemName: icon)
-                                    .font(.system(size: 18))
-                                    .frame(width: 44, height: 44)
-                                    .foregroundColor(.primary)
-                                    .border(.green, width: icon == self.icon ? 3 : 0)
-                                    .cornerRadius(6)
-                                    .onTapGesture {
-                                        self.icon = icon
-                                    }
-                            }
-                        } header: {
-                            HStack {
-                                Text(category)
-                                    .font(.headline)
-                                    .foregroundColor(.secondary)
-                                    .padding(.horizontal)
-                                    .padding(.vertical, 6)
-                                Spacer()
-                            }
-                            .background(.thinMaterial)
-                        }
-                    }
-                }
-            }
+            SymbolPicker(icon: $icon)
         }
-        .alert("Error saving alias", isPresented: $showingAlert) {
-            Button("OK", role: .cancel) {
+        .alert(String(localized: "ADDING_ALIAS_ERROR", defaultValue: "Error adding alias", comment: "An error has occured adding the alias"), isPresented: $showingAlert) {
+            Button(String(localized: "ADDING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while adding an alias, does not do anything but dismiss"), role: .cancel) {
                 dismiss()
             }
         }
     }
+    
+    var header: some View {
+        HStack {
+            Image(systemName: icon)
+                .font(.title3)
+                .fontWeight(.semibold)
+                .frame(minWidth: 35)
+            
+            TextField(String(localized: "ALIAS_ADDER_NAME_FIELD", defaultValue: "Name", comment: "Label for the name field when adding an alias"), text: $name)
+                .padding(10)
+                .background(Color(.systemGray5), in: .rect(cornerRadius: 12))
+                .overlay(alignment: .trailing) {
+                    if name != "" {
+                        Image(systemName: "xmark.circle.fill")
+                            .imageScale(.medium)
+                            .foregroundColor(Color(.systemGray2))
+                            .padding(.trailing, 10)
+                            .onTapGesture {
+                                name = ""
+                            }
+                    }
+                }
+            
+            Button(String(localized: "ADD_ALIAS_BUTTON", defaultValue: "Add", comment: "Button to add an alias")) {
+                guard name.count > 0 else { return }
+                
+                let alias = Alias(context: viewContext)
+                alias.icon = icon
+                alias.name = name
+                
+                guard viewContext.hasChanges else { return }
+                
+                do {
+                    try viewContext.save()
+                } catch {
+                    showingAlert = true
+                }
+                
+                dismiss()
+            }
+        }
+        .padding(.horizontal)
+        .padding(.top, 5)
+    }
 }
 
-struct AddAliasSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        AddAliasSheet()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+#Preview("AddAliasSheet") {
+    AddAliasSheet()
 }

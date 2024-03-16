@@ -1,4 +1,5 @@
 {
+  "originHash" : "734780f0d23d664f433400ad0a1e052c72f1f9d0e15388d44a3eae890e253fe6",
   "pins" : [
     {
       "identity" : "defaults",
@@ -24,9 +25,9 @@
       "location" : "https://github.com/StudentVue/SwiftVue.git",
       "state" : {
         "branch" : "main",
-        "revision" : "ea1df44cd9230d0f8d59c73806b798f43054d2d7"
+        "revision" : "0995b860463a06b9af9abffe8b03f0eb9a6c56cd"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }

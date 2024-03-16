@@ -16,8 +16,8 @@ struct CourseWidget: Widget {
         IntentConfiguration(kind: kind, intent: CourseConfigurationIntent.self, provider: CourseWidgetProvider()) { entry in
             CourseWidgetView(entry: entry)
         }
-        .configurationDisplayName("Class Grades")
-        .description("See your grades in a class.")
+        .configurationDisplayName(String(localized: "WIDGET_NAME_CLASS_GRADES", defaultValue: "Class Grades", comment: "The name of the class grades widget"))
+        .description(String(localized: "WIDGET_DESC_CLASS_GRADES", defaultValue: "See your grades in a single class.", comment: "The description of the class grades widget"))
         .supportedFamilies([.systemSmall, .systemMedium])
     }
 }

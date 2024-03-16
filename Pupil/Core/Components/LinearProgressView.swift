@@ -26,11 +26,6 @@ struct LinearProgressView: View {
     }
 }
 
-struct LinearProgressView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            LinearProgressView(progress: 0.7, lineWidth: 10, color: .blue)
-            ProgressView(value: 0.7)
-        }
-    }
+#Preview("LinearProgressView") {
+    LinearProgressView(progress: 0.7, lineWidth: 10, color: .blue)
 }

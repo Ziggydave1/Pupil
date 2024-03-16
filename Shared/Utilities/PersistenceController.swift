@@ -13,34 +13,6 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        let alias1 = Alias(context: viewContext)
-        alias1.name = "AP Calculus BC"
-        alias1.icon = "sum"
-        
-        let alias2 = Alias(context: viewContext)
-        alias2.name = "AP Literature"
-        
-        let alias3 = Alias(context: viewContext)
-        alias3.name = "AP Government"
-        
-        let link1 = AliasLink(context: viewContext)
-        link1.key = "AP CALC BC (380852)"
-        link1.value = alias1
-        
-        let link2 = AliasLink(context: viewContext)
-        link2.key = "AP ENG LIT COMP 12 (250642)"
-        link2.value = alias2
-        
-        let link3 = AliasLink(context: viewContext)
-        link3.key = "AP US GOV/POL (13016)"
-        link3.value = alias2
-        
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-        }
         return result
     }()
     
@@ -68,30 +40,16 @@ struct PersistenceController {
     
     func aliasLink(for key: String) -> AliasLink? {
         let request = AliasLink.fetchRequest()
-        request.predicate = NSPredicate(format: "key = %@", key)
-        
         
         let links = try? container.viewContext.fetch(request)
         
-        if let links, let link = links.first {
-            return link
-        } else {
-            return nil
-        }
+        return links?.first(where: { $0.key == key })
     }
     
     func alias(for key: String) -> Alias? {
-        let request = AliasLink.fetchRequest()
-        request.predicate = NSPredicate(format: "key = %@", key)
+        let link = aliasLink(for: key)
         
-        
-        let links = try? container.viewContext.fetch(request)
-        
-        if let links, let link = links.first, let alias = link.value {
-            return alias
-        } else {
-            return nil
-        }
+        return link?.value
     }
     
     func delete(_ object: NSManagedObject) {

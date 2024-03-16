@@ -26,15 +26,15 @@ struct SettingsAliasManager: View {
             List {
                 ForEach(aliases) { alias in
                     NavigationLink {
-                        EditAliasView(alias: alias, icon: alias.icon ?? "exclamationmark.circle.fill", name: alias.name ?? "Unknown")
+                        EditAliasView(alias: alias, icon: alias.icon ?? "exclamationmark.circle.fill", name: alias.name ?? String(localized: "UNKNOWN_ALIAS", defaultValue: "Unknown"))
                             .navigationBarHidden(true)
                     } label: {
                         HStack {
                             Image(systemName: alias.icon ?? "exclamationmark.circle.fill")
                                 .frame(width: 28, height: 28, alignment: .center)
-                                .font(.system(size: 25, weight: .regular))
-                            Text(alias.name ?? "Unknown")
-                                .font(.system(size: 18, weight: .semibold))
+                                .font(.title2)
+                            Text(alias.name ?? String(localized: "UNKNOWN_ALIAS", defaultValue: "Unknown"))
+                                .font(.headline)
                                 .padding(4)
                             Spacer()
                         }
@@ -48,10 +48,10 @@ struct SettingsAliasManager: View {
                     Button {
                         showingConfirmation = true
                     } label: {
-                        Text("Clear All")
+                        Text(String(localized: "CLEAR_ALL_ALIASES_BUTTON", defaultValue: "Clear All", comment: "Clear all aliases"))
                     }
-                    .confirmationDialog("Clear all aliases?", isPresented: $showingConfirmation) {
-                        Button("Clear Aliases", role: .destructive) {
+                    .confirmationDialog(String(localized: "CLEAR_ALL_ALIASES_CONFIRM_MSG", defaultValue: "Clear all aliases?", comment: "Asking for confirmation to clear all aliases"), isPresented: $showingConfirmation) {
+                        Button(String(localized: "CLEAR_ALL_ALIASES_FINAL_BUTTON", defaultValue: "Clear Aliases", comment: "Button for the user to confirm that they want to clear all aliases"), role: .destructive) {
                             withAnimation {
                                 aliases.forEach(viewContext.delete)
                                 
@@ -79,19 +79,19 @@ struct SettingsAliasManager: View {
             }
             
             if aliases.isEmpty {
-                Text("An alias is a name and icon you can assign to classes in your gradebook and schedule, making them easier to read and recognize.\n\nGet started by adding your first alias.")
+                Text(String(localized: "ALIAS_DESCRIPTION", defaultValue: "An alias is a name and icon you can assign to classes in your gradebook and schedule, making them easier to read and recognize.\n\nGet started by adding your first alias."))
                     .multilineTextAlignment(.center)
                     .foregroundColor(.secondary)
                     .padding()
             }
         }
-        .navigationTitle("Aliases")
+        .navigationTitle(String(localized: "ALIASES_NAV_TITLE", defaultValue: "Aliases"))
         .sheet(isPresented: $showingAddAlias) {
             AddAliasSheet()
                 .navigationBarHidden(true)
         }
-        .alert("Error removing alias", isPresented: $showingAlert) {
-            Button("OK", role: .cancel) {
+        .alert(String(localized: "REMOVING_ALIAS_ERROR", defaultValue: "Error removing alias", comment: "An error has occured removing the alias"), isPresented: $showingAlert) {
+            Button(String(localized: "REMOVING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while removing an alias, does not do anything but dismiss"), role: .cancel) {
                 dismiss()
             }
         }
@@ -110,9 +110,6 @@ struct SettingsAliasManager: View {
     }
 }
 
-struct SettingsAliasManager_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingsAliasManager()
-            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
+#Preview("SettingsAliasManager") {
+    SettingsAliasManager()
 }

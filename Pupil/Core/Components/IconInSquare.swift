@@ -18,8 +18,6 @@ struct IconInSquare: View {
     }
 }
 
-struct IconInSquare_Previews: PreviewProvider {
-    static var previews: some View {
-        IconInSquare(color: .red, image: "paintbrush.fill")
-    }
+#Preview("IconInSquare") {
+    IconInSquare(color: .red, image: "paintbrush.fill")
 }

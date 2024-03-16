@@ -32,20 +32,13 @@ struct CourseWidgetView : View {
                     case .systemMedium:
                         CourseWidgetMedium(mark: mark, courseName: courseName, courseIcon: courseIcon)
                     default:
-                        Text("Not Implemented")
+                        Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented"))
                     }
                 } else {
-                    Text("No Grade Data")
+                    Text(String(localized: "WIDGET_NO_GRADE_DATA", defaultValue: "No Grade Data"))
                 }
             }
         }
-    }
-}
-
-struct CourseWidget_Previews: PreviewProvider {
-    static var previews: some View {
-        CourseWidgetView(entry: CourseWidgetEntry(date: Date(), configuration: CourseConfigurationIntent(), course: dev.multiMarkCourse, error: nil))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
 
@@ -58,18 +51,23 @@ struct CourseWidgetSmall: View {
             ZStack {
                 if mark.scoreString == "N/A" {
                     CircularProgressView(progress: 100, lineWidth: 8, color: .gray)
-                    Text("N/A")
-                        .font(.system(size: 36, weight: .bold, design: .rounded))
+                    Text(String(localized: "WIDGET_GRADES_NA_FOUND", defaultValue: "N/A", comment: "Course grade is N/A"))
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .fontDesign(.rounded)
                         .foregroundColor(.primary)
                 } else {
-                    CircularProgressView(progress: Double(mark.scoreRaw) ?? 0, lineWidth: 8, color: gradeColors.color(for: mark.scoreRaw, and: mark.scoreString))
+                    CircularProgressView(progress: mark.scoreRaw, lineWidth: 8, color: gradeColors.color(for: mark.scoreRaw, and: mark.scoreString))
                     
                     VStack(spacing: -6) {
                         Text(mark.scoreString)
-                            .font(.system(size: 36, weight: .bold, design: .rounded))
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .fontDesign(.rounded)
                             .foregroundColor(.primary)
-                        Text("\(mark.scoreRaw)%")
-                            .font(.subheadline.weight(.semibold))
+                        Text(mark.scoreRaw.rawScoreFormatted())
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
                             .foregroundColor(.secondary)
                     }
                 }
@@ -95,12 +93,15 @@ struct CourseWidgetMedium: View {
                     Image(systemName: courseIcon)
                     Text(courseName)
                 }
-                .font(.title3.weight(.semibold))
+                .font(.title3)
+                .fontWeight(.semibold)
                 .lineLimit(1)
                 
                 Spacer()
                 Text(mark.scoreString)
-                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .fontDesign(.rounded)
                     .foregroundColor(gradeColors.color(for: mark.scoreRaw, and: mark.scoreString))
             }
             
@@ -131,6 +132,6 @@ struct CourseWidgetMedium: View {
                 return String(format: "%g/%g", numerator, denominator)
             }
         }
-        return "N/A"
+        return String(localized: "WIDGET_GRADES_NA", defaultValue: "N/A")
     }
 }
