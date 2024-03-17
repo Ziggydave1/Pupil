@@ -67,7 +67,7 @@ struct GradebookView: View {
                 }
             }
         }
-        .onChange(of: vm.gradebookPeriod) { newPeriod in
+        .onChange(of: vm.gradebookPeriod) { _, newPeriod in
             if newPeriod?.name != vm.gradebook?.reportingPeriod.name {
                 Task {
                     await vm.loadData(termIndex: newPeriod?.index)

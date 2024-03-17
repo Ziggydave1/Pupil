@@ -12,7 +12,6 @@ import SwiftVue
 
 struct CourseWidgetEntry: TimelineEntry {
     let date: Date
-    let configuration: CourseConfigurationIntent
-    let course: Course?
-    let error: String?
+    let configuration: CourseConfiguration
+    let result: Result<Course, Error>
 }

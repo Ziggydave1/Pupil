@@ -13,8 +13,9 @@ struct CourseWidget: Widget {
     let kind: String = "pupil.widgets.gradebook.course"
     
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: CourseConfigurationIntent.self, provider: CourseWidgetProvider()) { entry in
+        AppIntentConfiguration(kind: kind, intent: CourseConfiguration.self, provider: CourseWidgetProvider()) { entry in
             CourseWidgetView(entry: entry)
+                .containerBackground(Color.init(.systemGray6), for: .widget)
         }
         .configurationDisplayName(String(localized: "WIDGET_NAME_CLASS_GRADES", defaultValue: "Class Grades", comment: "The name of the class grades widget"))
         .description(String(localized: "WIDGET_DESC_CLASS_GRADES", defaultValue: "See your grades in a single class.", comment: "The description of the class grades widget"))

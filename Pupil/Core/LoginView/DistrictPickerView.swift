@@ -71,9 +71,7 @@ struct DistrictPickerView: View {
                 LoginView(district: district, credentials: $credentials, path: $path)
             }
         }
-        .onChange(of: zipCode) { _ in
-            getDistricts()
-        }
+        .onChange(of: zipCode) { getDistricts() }
         .onAppear {
             if let district =  Defaults[.district] {
                 path.append(district)

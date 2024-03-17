@@ -11,59 +11,61 @@ import Intents
 import Defaults
 import KeychainAccess
 
-struct CourseWidgetProvider: IntentTimelineProvider {
-    func placeholder(in context: Context) -> CourseWidgetEntry {
-        CourseWidgetEntry(date: Date(), configuration: CourseConfigurationIntent(), course: Course.preview, error: nil)
+struct CourseWidgetProvider: AppIntentTimelineProvider {
+    func placeholder(in context: Context) -> CourseWidgetEntry { previewEntry() }
+    
+    func snapshot(for configuration: CourseConfiguration, in context: Context) async -> CourseWidgetEntry {
+        if context.isPreview {
+            return previewEntry(for: configuration)
+        } else {
+            do {
+                let course = try await getCourse(withName: configuration.courseName)
+                return CourseWidgetEntry(date: Date(), configuration: configuration, result: .success(course))
+            } catch {
+                return CourseWidgetEntry(date: Date(), configuration: configuration, result: .failure(error))
+            }
+        }
     }
     
-    func getSnapshot(for configuration: CourseConfigurationIntent, in context: Context, completion: @escaping (CourseWidgetEntry) -> ()) {
-        completion(CourseWidgetEntry(date: Date(), configuration: configuration, course: Course.preview, error: nil))
+    func timeline(for configuration: CourseConfiguration, in context: Context) async -> Timeline<CourseWidgetEntry> {
+        do {
+            let course = try await getCourse(withName: configuration.courseName)
+            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, result: .success(course))
+            return Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
+        } catch {
+            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, result: .failure(error))
+            return Timeline(entries: [entry], policy: .never)
+        }
     }
     
-    func getTimeline(for configuration: CourseConfigurationIntent, in context: Context, completion: @escaping (Timeline<CourseWidgetEntry>) -> ()) {
+    func getCourse(withName name: String?) async throws -> Course {
         guard Defaults[.useBiometrics] else {
-            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: nil, error: String(localized: "WIDGET_ERROR_LOGIN_NOT_SAVED", defaultValue: "Enable save login within Pupil to use this widget."))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.saveLoginNotEnabled
         }
-        
         guard let district = Defaults[.district]?.url else {
-            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: nil, error: String(localized: "WIDGET_ERROR_DISTRICT_URL_INVALID", defaultValue: "Error loading district URL.\nPlease find your district again within Pupil."))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.invalidDistrictURL
         }
-        
-        guard let selectedCourse = configuration.courseName else {
-            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: nil, error: String(localized: "WIDGET_ERROR_NO_CLASS_CHOSEN", defaultValue: "Choose a class to display grades for.\nEdit the widget to continue.", comment: "The user has not chosen a class to view the grades of"))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+        guard let selectedCourse = name else {
+            throw PupilWidgetError.noSelectedCourse
         }
         
         let keychain = Keychain(service: Keychain_Credential_Service, accessGroup: Keychain_Group).accessibility(.afterFirstUnlock)
         
         guard let password = keychain["password"] else {
-            let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: nil, error: String(localized: "WIDGET_ERROR_UNABLE_TO_GET_PASSWORD", defaultValue: "Error retrieving user password.\nTry logging into the app."))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.unableToGetPassword
         }
         
         let credentials = Credentials(username: Defaults[.username], password: password, districtURL: district)
         let studentVue = StudentVue(credentials: credentials)
         
-        Task {
-            do {
-                let result = try await studentVue.getGradebook()
-                let course = result.courses.first(where: { course in
-                    course.title == selectedCourse
-                })
-                let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: course, error: nil)
-                let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
-                completion(timeline)
-            } catch {
-                let entry = CourseWidgetEntry(date: Date(), configuration: configuration, course: nil, error: error.localizedDescription)
-                let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
-                completion(timeline)
-            }
+        let result = try await studentVue.getGradebook()
+        guard let course = result.courses.first(where: { $0.title == selectedCourse }) else {
+            throw PupilWidgetError.unableToFindCourse
         }
+        return course
+    }
+    
+    func previewEntry(for configuration: CourseConfiguration = CourseConfiguration()) -> CourseWidgetEntry {
+        CourseWidgetEntry(date: Date(), configuration: configuration, result: .success(Course.preview))
     }
 }

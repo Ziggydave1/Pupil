@@ -11,6 +11,5 @@ import SwiftVue
 
 struct GradebookWidgetEntry: TimelineEntry {
     let date: Date
-    let grades: Gradebook?
-    let error: String?
+    let result: Result<Gradebook, Error>
 }

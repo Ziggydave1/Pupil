@@ -15,23 +15,16 @@ struct GradebookWidgetView: View {
     var entry: GradebookWidgetEntry
     
     var body: some View {
-        ZStack {
-            Color.init(.systemGray6)
-            if let error = entry.error {
-                Text(error)
-                    .padding()
-            } else {
-                if let grades = entry.grades {
-                    switch family {
-                    case .systemLarge:
-                        GradebookWidgetLarge(grades: grades)
-                    default:
-                        Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented", comment: "The selected widget size is not supported"))
-                    }
-                } else {
-                    Text(String(localized: "WIDGET_NO_GRADE_DATA", defaultValue: "No Grade Data", comment: "The current widget entry has no gradebook data"))
-                }
+        switch entry.result {
+        case .success(let gradebook):
+            switch family {
+            case .systemLarge:
+                GradebookWidgetLarge(grades: gradebook)
+            default:
+                Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented", comment: "The selected widget size is not supported"))
             }
+        case .failure(let error):
+            Text(error.localizedDescription)
         }
     }
 }
@@ -62,7 +55,7 @@ struct GradebookWidgetLarge: View {
                             .fontWeight(.bold)
                             .fontDesign(.rounded)
                             .foregroundColor(gradeColors.color(for: mark.scoreRaw, and: mark.scoreString))
-                            .frame(minWidth: 45, alignment: .leading)
+                            .frame(minWidth: 45)
                     }
                 }
                 .font(.title3)
@@ -72,7 +65,6 @@ struct GradebookWidgetLarge: View {
                 Spacer()
             }
         }
-        .padding()
     }
     
     func formatGrade(_ input: String) -> String {

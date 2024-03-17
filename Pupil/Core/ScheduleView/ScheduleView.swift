@@ -68,7 +68,7 @@ struct ScheduleView: View {
                 }
             }
         }
-        .onChange(of: vm.selectedTerm) { newTerm in
+        .onChange(of: vm.selectedTerm) { _, newTerm in
             if newTerm?.termIndex != vm.schedule?.termIndex {
                 Task {
                     await vm.loadData(termIndex: newTerm?.termIndex)

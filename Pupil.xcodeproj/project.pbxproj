@@ -23,20 +23,16 @@
 		72392CB12B78585B002F6188 /* GradeBreakdownChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72392CB02B78585B002F6188 /* GradeBreakdownChartView.swift */; };
 		723A01512B028C4D0001FDC1 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A01502B028C4D0001FDC1 /* Double.swift */; };
 		723A01522B028C4D0001FDC1 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A01502B028C4D0001FDC1 /* Double.swift */; };
-		723A01532B028C4D0001FDC1 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723A01502B028C4D0001FDC1 /* Double.swift */; };
 		72458D9A2B1C6AAC000F1AD0 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72458D992B1C6AAC000F1AD0 /* AssignmentView.swift */; };
 		72458D9C2B1C7519000F1AD0 /* GradebookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72458D9B2B1C7519000F1AD0 /* GradebookViewModel.swift */; };
 		724C507D2943AFA500302DE6 /* SwiftVue in Frameworks */ = {isa = PBXBuildFile; productRef = 724C507C2943AFA500302DE6 /* SwiftVue */; };
 		72533FAC2B17ABB70093DBCF /* BiometrictAuthUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72533FAB2B17ABB70093DBCF /* BiometrictAuthUtility.swift */; };
 		7258CE3A2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */; };
 		7258CE3B2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */; };
-		7258CE3C2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */; };
 		725F076A29E080BA00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
 		725F077429E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
 		725F077529E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
-		725F077629E085F800416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
 		725F077729E0861A00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
-		725F077829E0861B00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
 		72606EC2299C1B2A00CFB306 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC1299C1B2A00CFB306 /* HomeView.swift */; };
 		72606EC7299C281600CFB306 /* GradebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC6299C281600CFB306 /* GradebookView.swift */; };
 		72606ECB299D51AF00CFB306 /* CourseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECA299D51AF00CFB306 /* CourseRowView.swift */; };
@@ -44,7 +40,6 @@
 		72678C2F2ACDD28B0067D088 /* SymbolPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */; };
 		726B9A5729D55E8200E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5629D55E8200E72D7C /* KeychainAccess */; };
 		726B9A5929D55E9400E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5829D55E9400E72D7C /* KeychainAccess */; };
-		726B9A5B29D55E9B00E72D7C /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 726B9A5A29D55E9B00E72D7C /* KeychainAccess */; };
 		7270D5BE29B00FD000E8BF85 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5BD29B00FD000E8BF85 /* Config.swift */; };
 		7270D5CE29B11C3F00E8BF85 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5CD29B11C3F00E8BF85 /* Color.swift */; };
 		7270D5D429B136FB00E8BF85 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 7270D5D329B136FB00E8BF85 /* Defaults */; };
@@ -69,7 +64,6 @@
 		72B3032129D0FCB3000399A1 /* PupilWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3032029D0FCB3000399A1 /* PupilWidgetBundle.swift */; };
 		72B3032529D0FCB3000399A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B3032429D0FCB3000399A1 /* Assets.xcassets */; };
 		72B3032929D0FCB3000399A1 /* PupilWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 72B3031A29D0FCB2000399A1 /* PupilWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		72B3033A29D0FF02000399A1 /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */; };
 		72B3033C29D0FF19000399A1 /* SwiftVue in Frameworks */ = {isa = PBXBuildFile; productRef = 72B3033B29D0FF19000399A1 /* SwiftVue */; };
 		72B3033E29D0FF1D000399A1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 72B3033D29D0FF1D000399A1 /* Defaults */; };
 		72B3034129D10077000399A1 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3033F29D10077000399A1 /* CircularProgressView.swift */; };
@@ -78,18 +72,8 @@
 		72B3034629D10143000399A1 /* CourseWidgetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3033629D0FD42000399A1 /* CourseWidgetEntry.swift */; };
 		72B3034929D1019F000399A1 /* CourseWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3034729D1019F000399A1 /* CourseWidget.swift */; };
 		72B3034B29D101C6000399A1 /* CourseWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3034A29D101C6000399A1 /* CourseWidgetProvider.swift */; };
-		72B3035229D1039E000399A1 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B3035129D1039E000399A1 /* Intents.framework */; };
-		72B3035529D1039E000399A1 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3035429D1039E000399A1 /* IntentHandler.swift */; };
-		72B3035929D1039E000399A1 /* PupilIntents.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 72B3035029D1039E000399A1 /* PupilIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		72B3035E29D103B0000399A1 /* SwiftVue in Frameworks */ = {isa = PBXBuildFile; productRef = 72B3035D29D103B0000399A1 /* SwiftVue */; };
-		72B3036029D103B7000399A1 /* Defaults in Frameworks */ = {isa = PBXBuildFile; productRef = 72B3035F29D103B7000399A1 /* Defaults */; };
-		72B3036129D103DA000399A1 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3035429D1039E000399A1 /* IntentHandler.swift */; };
-		72B3036229D103FA000399A1 /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */; };
-		72B3036329D103FE000399A1 /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */; };
 		72B3037429D108DB000399A1 /* GradeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECC299D521E00CFB306 /* GradeColors.swift */; };
-		72B3037529D108DC000399A1 /* GradeColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECC299D521E00CFB306 /* GradeColors.swift */; };
 		72B3037A29D108E5000399A1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5BD29B00FD000E8BF85 /* Config.swift */; };
-		72B3037B29D108E6000399A1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5BD29B00FD000E8BF85 /* Config.swift */; };
 		72B3038129D1391E000399A1 /* GradebookWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3038029D1391E000399A1 /* GradebookWidget.swift */; };
 		72B3038329D1392B000399A1 /* GradebookWidgetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3038229D1392B000399A1 /* GradebookWidgetProvider.swift */; };
 		72B3038529D1393C000399A1 /* GradebookWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B3038429D1393C000399A1 /* GradebookWidgetView.swift */; };
@@ -116,30 +100,21 @@
 		72CA72C629E48B890009ABB2 /* iconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72AE29E48B450009ABB2 /* iconBlue.png */; };
 		72CA72C729E48B890009ABB2 /* iconLightBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B629E48B450009ABB2 /* iconLightBlue.png */; };
 		72CA72C829E48B890009ABB2 /* iconGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72AF29E48B450009ABB2 /* iconGreen.png */; };
-		72CA72C929E48B8A0009ABB2 /* iconOrange.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B429E48B450009ABB2 /* iconOrange.png */; };
-		72CA72CA29E48B8A0009ABB2 /* iconRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B229E48B450009ABB2 /* iconRed.png */; };
-		72CA72CB29E48B8A0009ABB2 /* iconYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B329E48B450009ABB2 /* iconYellow.png */; };
-		72CA72CC29E48B8A0009ABB2 /* iconPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B029E48B450009ABB2 /* iconPurple.png */; };
-		72CA72CD29E48B8A0009ABB2 /* iconPink.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B129E48B450009ABB2 /* iconPink.png */; };
-		72CA72CE29E48B8A0009ABB2 /* iconGray.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B529E48B450009ABB2 /* iconGray.png */; };
-		72CA72CF29E48B8A0009ABB2 /* iconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72AE29E48B450009ABB2 /* iconBlue.png */; };
-		72CA72D029E48B8A0009ABB2 /* iconLightBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72B629E48B450009ABB2 /* iconLightBlue.png */; };
-		72CA72D129E48B8A0009ABB2 /* iconGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 72CA72AF29E48B450009ABB2 /* iconGreen.png */; };
 		72CA72D329E490FF0009ABB2 /* IconChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA72D229E490FF0009ABB2 /* IconChooser.swift */; };
 		72CA72D529E4D3DE0009ABB2 /* AccentColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CA72D429E4D3DE0009ABB2 /* AccentColorChooser.swift */; };
 		72DB032D2B90EC7B00770849 /* LogoutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DB032C2B90EC7B00770849 /* LogoutAction.swift */; };
 		72DC933829B28065000216EA /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DC933729B28065000216EA /* LinearProgressView.swift */; };
+		72ED359D2BA641EB008136ED /* CourseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED359C2BA641EB008136ED /* CourseConfiguration.swift */; };
+		72ED359E2BA641EB008136ED /* CourseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED359C2BA641EB008136ED /* CourseConfiguration.swift */; };
+		72ED35A12BA6480D008136ED /* PupilWidgetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A02BA6480D008136ED /* PupilWidgetError.swift */; };
 		72F9F5A4299DA10F004A1CAA /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9F5A3299DA10F004A1CAA /* CourseDetailView.swift */; };
 		72FCD99E293ABDDF00A51FE4 /* PupilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCD99D293ABDDF00A51FE4 /* PupilApp.swift */; };
 		72FCD9A0293ABDDF00A51FE4 /* DistrictPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCD99F293ABDDF00A51FE4 /* DistrictPickerView.swift */; };
 		72FCD9A2293ABDDF00A51FE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72FCD9A1293ABDDF00A51FE4 /* Assets.xcassets */; };
 		72FCD9A5293ABDDF00A51FE4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72FCD9A4293ABDDF00A51FE4 /* Preview Assets.xcassets */; };
 		72FD393F29D7A55700793D45 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DC2CE29AD956B006A4190 /* String.swift */; };
-		72FD394029D7A55800793D45 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729DC2CE29AD956B006A4190 /* String.swift */; };
 		72FD394129D7A55B00793D45 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5CD29B11C3F00E8BF85 /* Color.swift */; };
-		72FD394229D7A55B00793D45 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5CD29B11C3F00E8BF85 /* Color.swift */; };
 		72FD394329D7A55E00793D45 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5D529B1370B00E8BF85 /* Defaults.swift */; };
-		72FD394429D7A55F00793D45 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7270D5D529B1370B00E8BF85 /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,13 +124,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 72B3031929D0FCB2000399A1;
 			remoteInfo = PupilWidgetExtension;
-		};
-		72B3035729D1039E000399A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 72FCD992293ABDDF00A51FE4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 72B3034F29D1039E000399A1;
-			remoteInfo = PupilIntents;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -167,7 +135,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				72B3032929D0FCB3000399A1 /* PupilWidgetExtension.appex in Embed Foundation Extensions */,
-				72B3035929D1039E000399A1 /* PupilIntents.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -229,15 +196,11 @@
 		72B3032629D0FCB3000399A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B3033429D0FD39000399A1 /* GradebookWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookWidgetEntry.swift; sourceTree = "<group>"; };
 		72B3033629D0FD42000399A1 /* CourseWidgetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWidgetEntry.swift; sourceTree = "<group>"; };
-		72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetIntents.intentdefinition; sourceTree = "<group>"; };
 		72B3033F29D10077000399A1 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		72B3034229D100CB000399A1 /* CourseWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWidgetView.swift; sourceTree = "<group>"; };
 		72B3034729D1019F000399A1 /* CourseWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWidget.swift; sourceTree = "<group>"; };
 		72B3034A29D101C6000399A1 /* CourseWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseWidgetProvider.swift; sourceTree = "<group>"; };
-		72B3035029D1039E000399A1 /* PupilIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PupilIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		72B3035129D1039E000399A1 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
-		72B3035429D1039E000399A1 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		72B3035629D1039E000399A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72B3037F29D11224000399A1 /* PupilWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PupilWidgetExtension.entitlements; sourceTree = "<group>"; };
 		72B3038029D1391E000399A1 /* GradebookWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookWidget.swift; sourceTree = "<group>"; };
 		72B3038229D1392B000399A1 /* GradebookWidgetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookWidgetProvider.swift; sourceTree = "<group>"; };
@@ -261,12 +224,13 @@
 		72CA72D429E4D3DE0009ABB2 /* AccentColorChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentColorChooser.swift; sourceTree = "<group>"; };
 		72DB032C2B90EC7B00770849 /* LogoutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAction.swift; sourceTree = "<group>"; };
 		72DC933729B28065000216EA /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
+		72ED359C2BA641EB008136ED /* CourseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseConfiguration.swift; sourceTree = "<group>"; };
+		72ED35A02BA6480D008136ED /* PupilWidgetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilWidgetError.swift; sourceTree = "<group>"; };
 		72F9F5A3299DA10F004A1CAA /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		72FCD99D293ABDDF00A51FE4 /* PupilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilApp.swift; sourceTree = "<group>"; };
 		72FCD99F293ABDDF00A51FE4 /* DistrictPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPickerView.swift; sourceTree = "<group>"; };
 		72FCD9A1293ABDDF00A51FE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72FCD9A4293ABDDF00A51FE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		72FD393B29D7526F00793D45 /* PupilIntents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PupilIntents.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,17 +243,6 @@
 				72B3031E29D0FCB3000399A1 /* SwiftUI.framework in Frameworks */,
 				72B3031C29D0FCB3000399A1 /* WidgetKit.framework in Frameworks */,
 				726B9A5929D55E9400E72D7C /* KeychainAccess in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		72B3034D29D1039E000399A1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				726B9A5B29D55E9B00E72D7C /* KeychainAccess in Frameworks */,
-				72B3036029D103B7000399A1 /* Defaults in Frameworks */,
-				72B3035229D1039E000399A1 /* Intents.framework in Frameworks */,
-				72B3035E29D103B0000399A1 /* SwiftVue in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +370,7 @@
 				72B3032629D0FCB3000399A1 /* Info.plist */,
 				72B3032029D0FCB3000399A1 /* PupilWidgetBundle.swift */,
 				72B3037F29D11224000399A1 /* PupilWidgetExtension.entitlements */,
+				72ED35A02BA6480D008136ED /* PupilWidgetError.swift */,
 			);
 			path = PupilWidget;
 			sourceTree = "<group>";
@@ -451,16 +405,6 @@
 				72B3038429D1393C000399A1 /* GradebookWidgetView.swift */,
 			);
 			path = GradebookWidget;
-			sourceTree = "<group>";
-		};
-		72B3035329D1039E000399A1 /* PupilIntents */ = {
-			isa = PBXGroup;
-			children = (
-				72B3035629D1039E000399A1 /* Info.plist */,
-				72B3035429D1039E000399A1 /* IntentHandler.swift */,
-				72FD393B29D7526F00793D45 /* PupilIntents.entitlements */,
-			);
-			path = PupilIntents;
 			sourceTree = "<group>";
 		};
 		72CA72AD29E48B100009ABB2 /* AppIcons */ = {
@@ -522,11 +466,9 @@
 				72FD393C29D7A4D900793D45 /* Shared */,
 				72FCD99C293ABDDF00A51FE4 /* Pupil */,
 				72B3031F29D0FCB3000399A1 /* PupilWidget */,
-				72B3035329D1039E000399A1 /* PupilIntents */,
 				724C507B2943AFA500302DE6 /* Frameworks */,
 				72C28D88299E893D006098CA /* Pupil.app */,
 				72B3031A29D0FCB2000399A1 /* PupilWidgetExtension.appex */,
-				72B3035029D1039E000399A1 /* PupilIntents.appex */,
 			);
 			sourceTree = "<group>";
 		};
@@ -557,13 +499,13 @@
 		72FD393C29D7A4D900793D45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				72ED359C2BA641EB008136ED /* CourseConfiguration.swift */,
 				72CA72AD29E48B100009ABB2 /* AppIcons */,
 				7270D5BD29B00FD000E8BF85 /* Config.swift */,
 				72FD394829D7A69500793D45 /* Extensions */,
 				7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */,
 				725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */,
 				72FD394929D7A6B100793D45 /* Utilities */,
-				72B3033829D0FF02000399A1 /* WidgetIntents.intentdefinition */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -613,28 +555,6 @@
 			productReference = 72B3031A29D0FCB2000399A1 /* PupilWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		72B3034F29D1039E000399A1 /* PupilIntents */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 72B3035A29D1039E000399A1 /* Build configuration list for PBXNativeTarget "PupilIntents" */;
-			buildPhases = (
-				72B3034C29D1039E000399A1 /* Sources */,
-				72B3034D29D1039E000399A1 /* Frameworks */,
-				72B3034E29D1039E000399A1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = PupilIntents;
-			packageProductDependencies = (
-				72B3035D29D103B0000399A1 /* SwiftVue */,
-				72B3035F29D103B7000399A1 /* Defaults */,
-				726B9A5A29D55E9B00E72D7C /* KeychainAccess */,
-			);
-			productName = PupilIntents;
-			productReference = 72B3035029D1039E000399A1 /* PupilIntents.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		72FCD999293ABDDF00A51FE4 /* Pupil */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72FCD9A8293ABDDF00A51FE4 /* Build configuration list for PBXNativeTarget "Pupil" */;
@@ -648,7 +568,6 @@
 			);
 			dependencies = (
 				72B3032829D0FCB3000399A1 /* PBXTargetDependency */,
-				72B3035829D1039E000399A1 /* PBXTargetDependency */,
 			);
 			name = Pupil;
 			packageProductDependencies = (
@@ -671,9 +590,6 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					72B3031929D0FCB2000399A1 = {
-						CreatedOnToolsVersion = 14.2;
-					};
-					72B3034F29D1039E000399A1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 					72FCD999293ABDDF00A51FE4 = {
@@ -701,7 +617,6 @@
 			targets = (
 				72FCD999293ABDDF00A51FE4 /* Pupil */,
 				72B3031929D0FCB2000399A1 /* PupilWidgetExtension */,
-				72B3034F29D1039E000399A1 /* PupilIntents */,
 			);
 		};
 /* End PBXProject section */
@@ -722,23 +637,6 @@
 				72CA72C829E48B890009ABB2 /* iconGreen.png in Resources */,
 				72CA72C429E48B890009ABB2 /* iconPink.png in Resources */,
 				72CA72C529E48B890009ABB2 /* iconGray.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		72B3034E29D1039E000399A1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72CA72C929E48B8A0009ABB2 /* iconOrange.png in Resources */,
-				72CA72D029E48B8A0009ABB2 /* iconLightBlue.png in Resources */,
-				72CA72CD29E48B8A0009ABB2 /* iconPink.png in Resources */,
-				72CA72D129E48B8A0009ABB2 /* iconGreen.png in Resources */,
-				72CA72CE29E48B8A0009ABB2 /* iconGray.png in Resources */,
-				72CA72CC29E48B8A0009ABB2 /* iconPurple.png in Resources */,
-				7258CE3C2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */,
-				72CA72CB29E48B8A0009ABB2 /* iconYellow.png in Resources */,
-				72CA72CF29E48B8A0009ABB2 /* iconBlue.png in Resources */,
-				72CA72CA29E48B8A0009ABB2 /* iconRed.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,39 +671,22 @@
 				72B3038129D1391E000399A1 /* GradebookWidget.swift in Sources */,
 				72B3034B29D101C6000399A1 /* CourseWidgetProvider.swift in Sources */,
 				72B3038329D1392B000399A1 /* GradebookWidgetProvider.swift in Sources */,
-				72B3036129D103DA000399A1 /* IntentHandler.swift in Sources */,
 				72B3034629D10143000399A1 /* CourseWidgetEntry.swift in Sources */,
 				72B3034929D1019F000399A1 /* CourseWidget.swift in Sources */,
 				72B3037429D108DB000399A1 /* GradeColors.swift in Sources */,
+				72ED35A12BA6480D008136ED /* PupilWidgetError.swift in Sources */,
 				72B3032129D0FCB3000399A1 /* PupilWidgetBundle.swift in Sources */,
 				72B3034129D10077000399A1 /* CircularProgressView.swift in Sources */,
 				72FD394129D7A55B00793D45 /* Color.swift in Sources */,
 				72FD394329D7A55E00793D45 /* Defaults.swift in Sources */,
+				72ED359E2BA641EB008136ED /* CourseConfiguration.swift in Sources */,
 				723A01522B028C4D0001FDC1 /* Double.swift in Sources */,
 				725F077729E0861A00416E08 /* PersistenceController.swift in Sources */,
 				72B3034429D100CB000399A1 /* CourseWidgetView.swift in Sources */,
 				72B3038529D1393C000399A1 /* GradebookWidgetView.swift in Sources */,
-				72B3033A29D0FF02000399A1 /* WidgetIntents.intentdefinition in Sources */,
 				72B3037A29D108E5000399A1 /* Config.swift in Sources */,
 				725F077529E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */,
 				72B3034529D10138000399A1 /* GradebookWidgetEntry.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		72B3034C29D1039E000399A1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				72B3036229D103FA000399A1 /* WidgetIntents.intentdefinition in Sources */,
-				72B3037B29D108E6000399A1 /* Config.swift in Sources */,
-				725F077829E0861B00416E08 /* PersistenceController.swift in Sources */,
-				725F077629E085F800416E08 /* PupilStorage.xcdatamodeld in Sources */,
-				72FD394229D7A55B00793D45 /* Color.swift in Sources */,
-				72FD394029D7A55800793D45 /* String.swift in Sources */,
-				72B3037529D108DC000399A1 /* GradeColors.swift in Sources */,
-				72B3035529D1039E000399A1 /* IntentHandler.swift in Sources */,
-				723A01532B028C4D0001FDC1 /* Double.swift in Sources */,
-				72FD394429D7A55F00793D45 /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +699,7 @@
 				7203732829B92BF1006D83BB /* AddAliasSheet.swift in Sources */,
 				72458D9A2B1C6AAC000F1AD0 /* AssignmentView.swift in Sources */,
 				72CA72D529E4D3DE0009ABB2 /* AccentColorChooser.swift in Sources */,
+				72ED359D2BA641EB008136ED /* CourseConfiguration.swift in Sources */,
 				72AA10642B1ED712001E7C20 /* DoctorsView.swift in Sources */,
 				7226AB9F293F014F0035E439 /* LoginView.swift in Sources */,
 				72678C2F2ACDD28B0067D088 /* SymbolPicker.swift in Sources */,
@@ -853,7 +735,6 @@
 				7270D5CE29B11C3F00E8BF85 /* Color.swift in Sources */,
 				723A01512B028C4D0001FDC1 /* Double.swift in Sources */,
 				72CA72D329E490FF0009ABB2 /* IconChooser.swift in Sources */,
-				72B3036329D103FE000399A1 /* WidgetIntents.intentdefinition in Sources */,
 				729C410029A2BFC8003AD7BC /* StudentViewModel.swift in Sources */,
 				723106B2297303C40072C98B /* IDCardView.swift in Sources */,
 				72011C5229B662300074F0EB /* ColorChooser.swift in Sources */,
@@ -879,11 +760,6 @@
 			target = 72B3031929D0FCB2000399A1 /* PupilWidgetExtension */;
 			targetProxy = 72B3032729D0FCB3000399A1 /* PBXContainerItemProxy */;
 		};
-		72B3035829D1039E000399A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 72B3034F29D1039E000399A1 /* PupilIntents */;
-			targetProxy = 72B3035729D1039E000399A1 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -901,7 +777,7 @@
 				INFOPLIST_FILE = PupilWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PupilWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -931,7 +807,7 @@
 				INFOPLIST_FILE = PupilWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = PupilWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -939,62 +815,6 @@
 				);
 				MARKETING_VERSION = "$(APP_VERSION)";
 				PRODUCT_BUNDLE_IDENTIFIER = kaneshige.tech.Pupil.PupilWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		72B3035B29D1039E000399A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = PupilIntents/PupilIntents.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(APP_BUILD)";
-				DEVELOPMENT_TEAM = DFHG7N3Z6B;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PupilIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PupilIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = "$(APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = kaneshige.tech.Pupil.PupilIntents;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		72B3035C29D1039E000399A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = PupilIntents/PupilIntents.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "$(APP_BUILD)";
-				DEVELOPMENT_TEAM = DFHG7N3Z6B;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PupilIntents/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = PupilIntents;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = "$(APP_VERSION)";
-				PRODUCT_BUNDLE_IDENTIFIER = kaneshige.tech.Pupil.PupilIntents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1057,7 +877,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1115,7 +935,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1148,7 +968,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1189,7 +1009,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1215,15 +1035,6 @@
 			buildConfigurations = (
 				72B3032B29D0FCB3000399A1 /* Debug */,
 				72B3032C29D0FCB3000399A1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		72B3035A29D1039E000399A1 /* Build configuration list for PBXNativeTarget "PupilIntents" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				72B3035B29D1039E000399A1 /* Debug */,
-				72B3035C29D1039E000399A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1291,11 +1102,6 @@
 			package = 726B9A5529D55E8200E72D7C /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
-		726B9A5A29D55E9B00E72D7C /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 726B9A5529D55E8200E72D7C /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
-		};
 		7270D5D329B136FB00E8BF85 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7270D5D229B136FB00E8BF85 /* XCRemoteSwiftPackageReference "Defaults" */;
@@ -1307,16 +1113,6 @@
 			productName = SwiftVue;
 		};
 		72B3033D29D0FF1D000399A1 /* Defaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7270D5D229B136FB00E8BF85 /* XCRemoteSwiftPackageReference "Defaults" */;
-			productName = Defaults;
-		};
-		72B3035D29D103B0000399A1 /* SwiftVue */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 726230CA2942B6220050A13B /* XCRemoteSwiftPackageReference "SwiftVue" */;
-			productName = SwiftVue;
-		};
-		72B3035F29D103B7000399A1 /* Defaults */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7270D5D229B136FB00E8BF85 /* XCRemoteSwiftPackageReference "Defaults" */;
 			productName = Defaults;

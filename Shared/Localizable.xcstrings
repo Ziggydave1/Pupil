@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     "%@" : {
 
     },
@@ -460,6 +463,12 @@
           }
         }
       }
+    },
+    "Course Configuration" : {
+
+    },
+    "Course Name" : {
+
     },
     "COURSE_ASSIGNMENTS_OR_BREAKDOWN_PICKER" : {
       "comment" : "Label for the picker to switch between viewing assignments and the grade breakdown",
@@ -1873,6 +1882,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "See your grades."
+          }
+        }
+      }
+    },
+    "WIDGET_ERROR_COURSE_NOT_FOUND" : {
+      "comment" : "The course picked for the widget was not present in the gradebook",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Selected course not found in gradebook"
           }
         }
       }

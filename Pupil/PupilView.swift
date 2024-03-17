@@ -30,7 +30,7 @@ struct PupilView: View {
         .fullScreenCover(isPresented: $showingLoginView) {
             DistrictPickerView(credentials: $credentials)
         }
-        .onChange(of: credentials) { newValue in
+        .onChange(of: credentials) { _, newValue in
             showingLoginView = newValue == nil
         }
     }

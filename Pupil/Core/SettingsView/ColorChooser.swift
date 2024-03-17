@@ -35,7 +35,7 @@ struct ColorChooser: View {
                 ForEach($gradeColors.stops) { $stop in
                     let width = proxy.size.width
                     Child(stop: $stop, width: width)
-                        .onChange(of: stop) { _ in stopChanged() }
+                        .onChange(of: stop) { stopChanged() }
                 }
             }
         }

@@ -120,7 +120,7 @@ struct CourseDetailView: View {
                                 Text(String(localized: "COURSE_SORT_ORDER_REVERSE", defaultValue: "Reverse", comment: "Reverse sorting direction")).tag(SortOrder.reverse)
                             }
                         }
-                        .onChange(of: sortingKey) { _ in
+                        .onChange(of: sortingKey) {
                             guard shouldSort else {
                                 shouldSort = true
                                 return
@@ -129,7 +129,7 @@ struct CourseDetailView: View {
                                 sort(assignments: selectedMark.assignments)
                             }
                         }
-                        .onChange(of: order) { _ in
+                        .onChange(of: order) {
                             guard shouldSort else {
                                 shouldSort = true
                                 return
@@ -165,7 +165,7 @@ struct CourseDetailView: View {
         .sheet(isPresented: $showAliasSheet) {
             SelectAliasSheet(key: course.title)
         }
-        .onChange(of: selectedMark) { newValue in
+        .onChange(of: selectedMark) { _, newValue in
             assignments = newValue.assignments.sorted(using: KeyPathComparator(\Assignment.date))
             shouldSort = false
             sortingKey = .date

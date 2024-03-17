@@ -12,49 +12,61 @@ import Defaults
 import KeychainAccess
 
 struct GradebookWidgetProvider: TimelineProvider {
-    func placeholder(in context: Context) -> GradebookWidgetEntry {
-        GradebookWidgetEntry(date: Date(), grades: Gradebook.preview, error: nil)
-    }
+    func placeholder(in context: Context) -> GradebookWidgetEntry { previewEntry }
     
     func getSnapshot(in context: Context, completion: @escaping (GradebookWidgetEntry) -> ()) {
-        completion(GradebookWidgetEntry(date: Date(), grades: Gradebook.preview, error: nil))
+        if context.isPreview {
+            completion(previewEntry)
+        } else {
+            Task {
+                do {
+                    let gradebook = try await getGradebook()
+                    let entry = GradebookWidgetEntry(date: Date(), result: .success(gradebook))
+                    completion(entry)
+                } catch {
+                    let entry = GradebookWidgetEntry(date: Date(), result: .failure(error))
+                    completion(entry)
+                }
+            }
+        }
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<GradebookWidgetEntry>) -> ()) {
+        Task {
+            do {
+                let gradebook = try await getGradebook()
+                let entry = GradebookWidgetEntry(date: Date(), result: .success(gradebook))
+                let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
+                completion(timeline)
+            } catch {
+                let entry = GradebookWidgetEntry(date: Date(), result: .failure(error))
+                let timeline = Timeline(entries: [entry], policy: .never)
+                completion(timeline)
+            }
+        }
+    }
+    
+    func getGradebook() async throws -> Gradebook {
         guard Defaults[.useBiometrics] else {
-            let entry = GradebookWidgetEntry(date: Date(), grades: nil, error: String(localized: "WIDGET_ERROR_LOGIN_NOT_SAVED", defaultValue: "Enable save login within Pupil to use this widget.", comment: "The user credentials are not saved, which the widget requires to work"))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.saveLoginNotEnabled
         }
-
         guard let district = Defaults[.district]?.url else {
-            let entry = GradebookWidgetEntry(date: Date(), grades: nil, error: String(localized: "WIDGET_ERROR_DISTRICT_URL_INVALID", defaultValue: "Error loading district URL.\nPlease find your district again within Pupil.", comment: "The users district url is invalid"))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.invalidDistrictURL
         }
-
+        
         let keychain = Keychain(service: Keychain_Credential_Service, accessGroup: Keychain_Group).accessibility(.afterFirstUnlock)
-
+        
         guard let password = keychain["password"] else {
-            let entry = GradebookWidgetEntry(date: Date(), grades: nil, error: String(localized: "WIDGET_ERROR_UNABLE_TO_GET_PASSWORD", defaultValue: "Error retrieving user password.\nTry logging into the app.", comment: "The user password was unable to be retrieved"))
-            completion(Timeline(entries: [entry], policy: .never))
-            return
+            throw PupilWidgetError.unableToGetPassword
         }
         
         let credentials = Credentials(username: Defaults[.username], password: password, districtURL: district)
         let studentVue = StudentVue(credentials: credentials)
-
-        Task {
-            do {
-                let result = try await studentVue.getGradebook()
-                let entry = GradebookWidgetEntry(date: Date(), grades: result, error: nil)
-                let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
-                completion(timeline)
-            } catch {
-                let entry = GradebookWidgetEntry(date: Date(), grades: nil, error: error.localizedDescription)
-                let timeline = Timeline(entries: [entry], policy: .after(Date().addingTimeInterval(60*60)))
-                completion(timeline)
-            }
-        }
+        
+        return try await studentVue.getGradebook()
+    }
+    
+    var previewEntry: GradebookWidgetEntry {
+        GradebookWidgetEntry(date: Date(), result: .success(Gradebook.preview))
     }
 }

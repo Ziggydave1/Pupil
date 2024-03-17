@@ -16,27 +16,28 @@ struct CourseWidgetView : View {
     var entry: CourseWidgetEntry
     
     var body: some View {
-        ZStack {
-            Color.init(.systemGray6)
-            if let error = entry.error {
-                Text(error)
-                    .padding()
-            } else {
-                if let course = entry.course, let mark = course.marks.first {
-                    let alias = PersistenceController.shared.alias(for: course.title)
-                    let courseName = alias?.name ?? course.title
-                    let courseIcon = alias?.icon ?? "studentdesk"
-                    switch family {
-                    case .systemSmall:
-                        CourseWidgetSmall(mark: mark, courseName: courseName)
-                    case .systemMedium:
-                        CourseWidgetMedium(mark: mark, courseName: courseName, courseIcon: courseIcon)
-                    default:
-                        Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented"))
-                    }
-                } else {
-                    Text(String(localized: "WIDGET_NO_GRADE_DATA", defaultValue: "No Grade Data"))
+        switch entry.result {
+        case .success(let course):
+            if let mark = course.marks.first {
+                let alias = PersistenceController.shared.alias(for: course.title)
+                let courseName = alias?.name ?? course.title
+                let courseIcon = alias?.icon ?? "studentdesk"
+                switch family {
+                case .systemSmall:
+                    CourseWidgetSmall(mark: mark, courseName: courseName)
+                case .systemMedium:
+                    CourseWidgetMedium(mark: mark, courseName: courseName, courseIcon: courseIcon)
+                default:
+                    Text(String(localized: "WIDGET_SIZE_NOT_IMPLEMENTED", defaultValue: "Not Implemented"))
                 }
+            } else {
+                Text(String(localized: "WIDGET_NO_GRADE_DATA", defaultValue: "No Grade Data", comment: "The current widget entry has no gradebook data"))
+            }
+        case .failure(let error):
+            if let error = error as? PupilWidgetError {
+                Text(error.errorDescription)
+            } else {
+                Text(error.localizedDescription)
             }
         }
     }
@@ -77,7 +78,6 @@ struct CourseWidgetSmall: View {
                 .font(.headline)
                 .lineLimit(1)
         }
-        .padding()
     }
 }
 
@@ -122,7 +122,6 @@ struct CourseWidgetMedium: View {
                 Spacer()
             }
         }
-        .padding()
     }
     
     func formatGrade(_ input: String) -> String {

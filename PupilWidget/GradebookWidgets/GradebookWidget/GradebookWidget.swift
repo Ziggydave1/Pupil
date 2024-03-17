@@ -15,6 +15,7 @@ struct GradebookWidget: Widget {
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: GradebookWidgetProvider()) { entry in
             GradebookWidgetView(entry: entry)
+                .containerBackground(Color.init(.systemGray6), for: .widget)
         }
         .configurationDisplayName(String(localized: "WIDGET_NAME_GRADES", defaultValue: "Grades", comment: "The name of the grades widget"))
         .description(String(localized: "WIDGET_DESC_GRADES", defaultValue: "See your grades.", comment: "Description of the grades widget"))

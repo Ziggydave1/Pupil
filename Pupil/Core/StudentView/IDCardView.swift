@@ -107,7 +107,7 @@ struct IDCardView: View {
                 }
             }
         }
-        .onChange(of: photoItem) { value in
+        .onChange(of: photoItem) { _, value in
             Task {
                 if let data = try? await value?.loadTransferable(type: Data.self) {
                     if let _ = UIImage(data: data) {
