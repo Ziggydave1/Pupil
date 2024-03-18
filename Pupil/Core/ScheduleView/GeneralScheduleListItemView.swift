@@ -8,17 +8,18 @@
 import SwiftUI
 import SwiftVue
 import Defaults
+import SwiftData
 
 struct GeneralScheduleListItemView: View {
     let classListing: ClassListing
     @State private var showingAliasChooser: Bool = false
     @State private var showEmail: Bool = false
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.key)]) var aliasLinks: FetchedResults<AliasLink>
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var aliases: FetchedResults<Alias>
+    @Query private var aliasLinks: [AliasLink]
     
     init(classListing: ClassListing) {
         self.classListing = classListing
+        self._aliasLinks = Query(filter: #Predicate<AliasLink> { $0.key == classListing.courseTitle }, animation: .default)
     }
     
     var body: some View {
@@ -65,8 +66,8 @@ struct GeneralScheduleListItemView: View {
         .contextMenu {
             GiveAliasButton(showingSheet: $showingAliasChooser)
             
-            if let aliasLink {
-                RemoveAliasLinkButton(link: aliasLink)
+            if let link = aliasLinks.first {
+                RemoveAliasLinkButton(link: link)
             }
             
             Divider()
@@ -78,12 +79,8 @@ struct GeneralScheduleListItemView: View {
         }
     }
     
-    var aliasLink: AliasLink? {
-        return aliasLinks.first { $0.key == classListing.courseTitle }
-    }
-    
-    var alias: Alias? {
-        return aliases.first(where: { $0.objectID == aliasLink?.value?.objectID })
+    private var alias: Alias? {
+        return aliasLinks.first?.value
     }
 }
 

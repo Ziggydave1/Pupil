@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftVue
 import WidgetKit
 import Defaults
+import SwiftData
 
 struct GradebookWidgetView: View {
     @Environment(\.widgetFamily) var family
@@ -30,6 +31,7 @@ struct GradebookWidgetView: View {
 }
 
 struct GradebookWidgetLarge: View {
+    @Query private var aliasLinks: [AliasLink]
     @Default(.gradeColors) var gradeColors
     let grades: Gradebook
     var body: some View {
@@ -42,7 +44,7 @@ struct GradebookWidgetLarge: View {
             }
             
             ForEach(grades.courses.prefix(7)) { course in
-                let alias = PersistenceController.shared.alias(for: course.title)
+                let alias = aliasLinks.first(where: { $0.key == course.title })?.value
                 HStack {
                     Image(systemName: alias?.icon ?? "studentdesk")
                         .frame(minWidth: 30)

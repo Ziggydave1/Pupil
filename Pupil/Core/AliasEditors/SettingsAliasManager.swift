@@ -8,16 +8,15 @@
 import SwiftUI
 import Defaults
 import WidgetKit
+import SwiftData
 
 struct SettingsAliasManager: View {
     @Environment(\.dismiss) var dismiss
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.modelContext) private var context
     @State private var showingAddAlias: Bool = false
     @State private var showingConfirmation: Bool = false
-    @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.name)],
-        animation: .default
-    ) private var aliases: FetchedResults<Alias>
+    
+    @Query(sort: \Alias.name, order: .forward) private var aliases: [Alias]
     
     @State private var showingAlert: Bool = false
     
@@ -26,14 +25,13 @@ struct SettingsAliasManager: View {
             List {
                 ForEach(aliases) { alias in
                     NavigationLink {
-                        EditAliasView(alias: alias, icon: alias.icon ?? "exclamationmark.circle.fill", name: alias.name ?? String(localized: "UNKNOWN_ALIAS", defaultValue: "Unknown"))
-                            .navigationBarHidden(true)
+                        AliasEditor(alias: alias)
                     } label: {
                         HStack {
-                            Image(systemName: alias.icon ?? "exclamationmark.circle.fill")
+                            Image(systemName: alias.icon)
                                 .frame(width: 28, height: 28, alignment: .center)
                                 .font(.title2)
-                            Text(alias.name ?? String(localized: "UNKNOWN_ALIAS", defaultValue: "Unknown"))
+                            Text(alias.name)
                                 .font(.headline)
                                 .padding(4)
                             Spacer()
@@ -53,16 +51,8 @@ struct SettingsAliasManager: View {
                     .confirmationDialog(String(localized: "CLEAR_ALL_ALIASES_CONFIRM_MSG", defaultValue: "Clear all aliases?", comment: "Asking for confirmation to clear all aliases"), isPresented: $showingConfirmation) {
                         Button(String(localized: "CLEAR_ALL_ALIASES_FINAL_BUTTON", defaultValue: "Clear Aliases", comment: "Button for the user to confirm that they want to clear all aliases"), role: .destructive) {
                             withAnimation {
-                                aliases.forEach(viewContext.delete)
-                                
-                                if viewContext.hasChanges {
-                                    do {
-                                        try viewContext.save()
-                                        WidgetCenter.shared.reloadAllTimelines()
-                                    } catch {
-                                        showingAlert = true
-                                    }
-                                }
+                                aliases.forEach(context.delete)
+                                WidgetCenter.shared.reloadAllTimelines()
                             }
                         }
                     }
@@ -87,8 +77,7 @@ struct SettingsAliasManager: View {
         }
         .navigationTitle(String(localized: "ALIASES_NAV_TITLE", defaultValue: "Aliases"))
         .sheet(isPresented: $showingAddAlias) {
-            AddAliasSheet()
-                .navigationBarHidden(true)
+            AliasEditor(alias: nil)
         }
         .alert(String(localized: "REMOVING_ALIAS_ERROR", defaultValue: "Error removing alias", comment: "An error has occured removing the alias"), isPresented: $showingAlert) {
             Button(String(localized: "REMOVING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while removing an alias, does not do anything but dismiss"), role: .cancel) {
@@ -99,14 +88,9 @@ struct SettingsAliasManager: View {
     
     func delete(at offsets: IndexSet) {
         withAnimation {
-            offsets.map { aliases[$0] }.forEach(viewContext.delete)
-            
-            do {
-                try viewContext.save()
-            } catch {
-                showingAlert = true
-            }
+            offsets.map { aliases[$0] }.forEach(context.delete)
         }
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 

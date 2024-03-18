@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftVue
 import Defaults
+import SwiftData
 
 struct CourseDetailView: View {
     @Default(.gradeColors) var gradeColors
@@ -17,8 +18,7 @@ struct CourseDetailView: View {
     @State private var showAliasSheet: Bool = false
     @State private var assignments: [Assignment]
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.key)]) var aliasLinks: FetchedResults<AliasLink>
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) var aliases: FetchedResults<Alias>
+    @Query private var aliasLinks: [AliasLink]
     
     @State private var sortingKey: SortingKey = .date
     @State private var shouldSort = true
@@ -42,6 +42,7 @@ struct CourseDetailView: View {
         self.course = course
         self._selectedMark = State(initialValue: course.marks.first!)
         self._assignments = State(initialValue: course.marks.first!.assignments.sorted(using: KeyPathComparator(\Assignment.date)))
+        self._aliasLinks = Query(filter: #Predicate<AliasLink> { $0.key == course.title }, animation: .default)
     }
     
     var body: some View {
@@ -156,8 +157,8 @@ struct CourseDetailView: View {
                 Menu(String(localized: "COURSE_EDIT_BUTTON", defaultValue: "Edit", comment: "Button to pull up the alias picker when wanting to customize a course")) {
                     GiveAliasButton(showingSheet: $showAliasSheet)
                     
-                    if let aliasLink {
-                        RemoveAliasLinkButton(link: aliasLink)
+                    if let link = aliasLinks.first {
+                        RemoveAliasLinkButton(link: link)
                     }
                 }
             }
@@ -172,12 +173,8 @@ struct CourseDetailView: View {
         }
     }
     
-    var aliasLink: AliasLink? {
-        return aliasLinks.first { $0.key == course.title }
-    }
-    
-    var alias: Alias? {
-        return aliases.first(where: { $0.objectID == aliasLink?.value?.objectID })
+    private var alias: Alias? {
+        return aliasLinks.first?.value
     }
     
     func sort(assignments: [Assignment]) {

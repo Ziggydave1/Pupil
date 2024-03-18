@@ -8,15 +8,13 @@
 import SwiftUI
 import Defaults
 import WidgetKit
+import SwiftData
 
 struct SelectAliasSheet: View {
     @Environment(\.dismiss) var dismiss
-    @Environment(\.managedObjectContext) private var viewContext
+    @Environment(\.modelContext) private var context
     
-    @FetchRequest(
-        sortDescriptors: [SortDescriptor(\.name)],
-        animation: .default
-    ) private var aliases: FetchedResults<Alias>
+    @Query(sort: \Alias.name, order: .forward) private var aliases: [Alias]
     
     let key: String
     @State private var showingAddAlias: Bool = false
@@ -28,28 +26,18 @@ struct SelectAliasSheet: View {
                 List {
                     ForEach(aliases) { alias in
                         Button {
-                            if let link = PersistenceController.shared.aliasLink(for: key) {
-                                link.value = alias
-                            } else {
-                                let newLink = AliasLink(context: viewContext)
-                                newLink.key = key
-                                newLink.value = alias
-                            }
-                            if viewContext.hasChanges {
-                                do {
-                                    try viewContext.save()
-                                    WidgetCenter.shared.reloadAllTimelines()
-                                    dismiss()
-                                } catch {
-                                    showingAlert = true
-                                }
-                            }
+                            let newLink = AliasLink(key: key)
+                            newLink.value = alias
+                            
+                            context.insert(newLink)
+                            WidgetCenter.shared.reloadAllTimelines()
+                            dismiss()
                         } label: {
                             HStack {
-                                Image(systemName: alias.icon ?? "exclamationmark.circle.fill")
+                                Image(systemName: alias.icon)
                                     .frame(width: 28, height: 28, alignment: .center)
                                     .font(.title2)
-                                Text(alias.name ?? String(localized: "UNKNOWN_ALIAS", defaultValue: "Unknown", comment: "A stored alias doesn't have a name"))
+                                Text(alias.name)
                                     .font(.headline)
                                     .padding(4)
                                 Spacer()
@@ -69,8 +57,7 @@ struct SelectAliasSheet: View {
                     }
                 }
                 .sheet(isPresented: $showingAddAlias) {
-                    AddAliasSheet()
-                        .navigationBarHidden(true)
+                    AliasEditor(alias: nil)
                 }
                 if aliases.isEmpty {
                     Text(String(localized: "ALIAS_DESCRIPTION", defaultValue: "An alias is a name and icon you can assign to classes in your gradebook and schedule, making them easier to read and recognize.\n\nGet started by adding your first alias.", comment: "Description of what an alias is for new users"))

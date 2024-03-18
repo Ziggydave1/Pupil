@@ -11,10 +11,8 @@
 		720075DE2AF0213A009BAEB3 /* GradeBreakdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720075DD2AF0213A009BAEB3 /* GradeBreakdownView.swift */; };
 		72011C5229B662300074F0EB /* ColorChooser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5129B662300074F0EB /* ColorChooser.swift */; };
 		72011C5729B6DB690074F0EB /* SelectAliasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72011C5629B6DB690074F0EB /* SelectAliasSheet.swift */; };
-		7203732829B92BF1006D83BB /* AddAliasSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732729B92BF1006D83BB /* AddAliasSheet.swift */; };
 		7203732A29BE61F5006D83BB /* SettingsAliasManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732929BE61F5006D83BB /* SettingsAliasManager.swift */; };
 		7203732C29BE6545006D83BB /* IconInSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203732B29BE6545006D83BB /* IconInSquare.swift */; };
-		7203733129BFA280006D83BB /* EditAliasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7203733029BFA280006D83BB /* EditAliasView.swift */; };
 		7212855B293EF60E00913782 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7212855A293EF60E00913782 /* Launch Screen.storyboard */; };
 		7212D57A299DA84800AF11F3 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7212D579299DA84800AF11F3 /* CircularProgressView.swift */; };
 		7226AB9A293EFE5C0035E439 /* DistrictRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7226AB99293EFE5C0035E439 /* DistrictRowView.swift */; };
@@ -29,10 +27,6 @@
 		72533FAC2B17ABB70093DBCF /* BiometrictAuthUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72533FAB2B17ABB70093DBCF /* BiometrictAuthUtility.swift */; };
 		7258CE3A2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */; };
 		7258CE3B2BA38C1E00B78C73 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */; };
-		725F076A29E080BA00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
-		725F077429E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
-		725F077529E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */; };
-		725F077729E0861A00416E08 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725F076929E080BA00416E08 /* PersistenceController.swift */; };
 		72606EC2299C1B2A00CFB306 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC1299C1B2A00CFB306 /* HomeView.swift */; };
 		72606EC7299C281600CFB306 /* GradebookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606EC6299C281600CFB306 /* GradebookView.swift */; };
 		72606ECB299D51AF00CFB306 /* CourseRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72606ECA299D51AF00CFB306 /* CourseRowView.swift */; };
@@ -107,6 +101,11 @@
 		72ED359D2BA641EB008136ED /* CourseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED359C2BA641EB008136ED /* CourseConfiguration.swift */; };
 		72ED359E2BA641EB008136ED /* CourseConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED359C2BA641EB008136ED /* CourseConfiguration.swift */; };
 		72ED35A12BA6480D008136ED /* PupilWidgetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A02BA6480D008136ED /* PupilWidgetError.swift */; };
+		72ED35A42BA7B127008136ED /* AliasLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A22BA7B127008136ED /* AliasLink.swift */; };
+		72ED35A52BA7B127008136ED /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A32BA7B127008136ED /* Alias.swift */; };
+		72ED35A62BA7B127008136ED /* AliasLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A22BA7B127008136ED /* AliasLink.swift */; };
+		72ED35A72BA7B127008136ED /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35A32BA7B127008136ED /* Alias.swift */; };
+		72ED35AC2BA7BD38008136ED /* AliasEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72ED35AB2BA7BD38008136ED /* AliasEditor.swift */; };
 		72F9F5A4299DA10F004A1CAA /* CourseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F9F5A3299DA10F004A1CAA /* CourseDetailView.swift */; };
 		72FCD99E293ABDDF00A51FE4 /* PupilApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCD99D293ABDDF00A51FE4 /* PupilApp.swift */; };
 		72FCD9A0293ABDDF00A51FE4 /* DistrictPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FCD99F293ABDDF00A51FE4 /* DistrictPickerView.swift */; };
@@ -146,10 +145,8 @@
 		720075DD2AF0213A009BAEB3 /* GradeBreakdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeBreakdownView.swift; sourceTree = "<group>"; };
 		72011C5129B662300074F0EB /* ColorChooser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChooser.swift; sourceTree = "<group>"; };
 		72011C5629B6DB690074F0EB /* SelectAliasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAliasSheet.swift; sourceTree = "<group>"; };
-		7203732729B92BF1006D83BB /* AddAliasSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAliasSheet.swift; sourceTree = "<group>"; };
 		7203732929BE61F5006D83BB /* SettingsAliasManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAliasManager.swift; sourceTree = "<group>"; };
 		7203732B29BE6545006D83BB /* IconInSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconInSquare.swift; sourceTree = "<group>"; };
-		7203733029BFA280006D83BB /* EditAliasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAliasView.swift; sourceTree = "<group>"; };
 		7212855A293EF60E00913782 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7212D579299DA84800AF11F3 /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
 		7226AB99293EFE5C0035E439 /* DistrictRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictRowView.swift; sourceTree = "<group>"; };
@@ -161,8 +158,6 @@
 		72458D9B2B1C7519000F1AD0 /* GradebookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookViewModel.swift; sourceTree = "<group>"; };
 		72533FAB2B17ABB70093DBCF /* BiometrictAuthUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometrictAuthUtility.swift; sourceTree = "<group>"; };
 		7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		725F074629E07B4000416E08 /* PupilStorage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PupilStorage.xcdatamodel; sourceTree = "<group>"; };
-		725F076929E080BA00416E08 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		72606EC1299C1B2A00CFB306 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		72606EC6299C281600CFB306 /* GradebookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradebookView.swift; sourceTree = "<group>"; };
 		72606ECA299D51AF00CFB306 /* CourseRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseRowView.swift; sourceTree = "<group>"; };
@@ -226,6 +221,9 @@
 		72DC933729B28065000216EA /* LinearProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearProgressView.swift; sourceTree = "<group>"; };
 		72ED359C2BA641EB008136ED /* CourseConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseConfiguration.swift; sourceTree = "<group>"; };
 		72ED35A02BA6480D008136ED /* PupilWidgetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilWidgetError.swift; sourceTree = "<group>"; };
+		72ED35A22BA7B127008136ED /* AliasLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasLink.swift; sourceTree = "<group>"; };
+		72ED35A32BA7B127008136ED /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		72ED35AB2BA7BD38008136ED /* AliasEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasEditor.swift; sourceTree = "<group>"; };
 		72F9F5A3299DA10F004A1CAA /* CourseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailView.swift; sourceTree = "<group>"; };
 		72FCD99D293ABDDF00A51FE4 /* PupilApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupilApp.swift; sourceTree = "<group>"; };
 		72FCD99F293ABDDF00A51FE4 /* DistrictPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictPickerView.swift; sourceTree = "<group>"; };
@@ -275,11 +273,10 @@
 		72011C5529B6D8C10074F0EB /* AliasEditors */ = {
 			isa = PBXGroup;
 			children = (
-				7203732729B92BF1006D83BB /* AddAliasSheet.swift */,
-				7203733029BFA280006D83BB /* EditAliasView.swift */,
 				72011C5629B6DB690074F0EB /* SelectAliasSheet.swift */,
 				7203732929BE61F5006D83BB /* SettingsAliasManager.swift */,
 				72678C2E2ACDD28B0067D088 /* SymbolPicker.swift */,
+				72ED35AB2BA7BD38008136ED /* AliasEditor.swift */,
 			);
 			path = AliasEditors;
 			sourceTree = "<group>";
@@ -499,12 +496,13 @@
 		72FD393C29D7A4D900793D45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				72ED35A22BA7B127008136ED /* AliasLink.swift */,
+				72ED35A32BA7B127008136ED /* Alias.swift */,
 				72ED359C2BA641EB008136ED /* CourseConfiguration.swift */,
 				72CA72AD29E48B100009ABB2 /* AppIcons */,
 				7270D5BD29B00FD000E8BF85 /* Config.swift */,
 				72FD394829D7A69500793D45 /* Extensions */,
 				7258CE392BA38C1E00B78C73 /* Localizable.xcstrings */,
-				725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */,
 				72FD394929D7A6B100793D45 /* Utilities */,
 			);
 			path = Shared;
@@ -525,7 +523,6 @@
 			isa = PBXGroup;
 			children = (
 				72606ECC299D521E00CFB306 /* GradeColors.swift */,
-				725F076929E080BA00416E08 /* PersistenceController.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -681,11 +678,11 @@
 				72FD394329D7A55E00793D45 /* Defaults.swift in Sources */,
 				72ED359E2BA641EB008136ED /* CourseConfiguration.swift in Sources */,
 				723A01522B028C4D0001FDC1 /* Double.swift in Sources */,
-				725F077729E0861A00416E08 /* PersistenceController.swift in Sources */,
+				72ED35A62BA7B127008136ED /* AliasLink.swift in Sources */,
+				72ED35A72BA7B127008136ED /* Alias.swift in Sources */,
 				72B3034429D100CB000399A1 /* CourseWidgetView.swift in Sources */,
 				72B3038529D1393C000399A1 /* GradebookWidgetView.swift in Sources */,
 				72B3037A29D108E5000399A1 /* Config.swift in Sources */,
-				725F077529E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */,
 				72B3034529D10138000399A1 /* GradebookWidgetEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,7 +693,6 @@
 			files = (
 				72F9F5A4299DA10F004A1CAA /* CourseDetailView.swift in Sources */,
 				729DC2CD29A7CFBA006A4190 /* GeneralScheduleListItemView.swift in Sources */,
-				7203732829B92BF1006D83BB /* AddAliasSheet.swift in Sources */,
 				72458D9A2B1C6AAC000F1AD0 /* AssignmentView.swift in Sources */,
 				72CA72D529E4D3DE0009ABB2 /* AccentColorChooser.swift in Sources */,
 				72ED359D2BA641EB008136ED /* CourseConfiguration.swift in Sources */,
@@ -707,6 +703,7 @@
 				7226AB9A293EFE5C0035E439 /* DistrictRowView.swift in Sources */,
 				72606EC2299C1B2A00CFB306 /* HomeView.swift in Sources */,
 				720075DA2AEC2DFC009BAEB3 /* MenuButtons.swift in Sources */,
+				72ED35AC2BA7BD38008136ED /* AliasEditor.swift in Sources */,
 				72C28D8A299E9581006098CA /* ScheduleView.swift in Sources */,
 				729363422B3CC8D900C6984E /* CalendarView.swift in Sources */,
 				7295BD242AF02DA800F727C6 /* AssignmentChartView.swift in Sources */,
@@ -727,10 +724,8 @@
 				72C9E5962B26744F005E50F6 /* GeneralScheduleView.swift in Sources */,
 				72FCD9A0293ABDDF00A51FE4 /* DistrictPickerView.swift in Sources */,
 				72FCD99E293ABDDF00A51FE4 /* PupilApp.swift in Sources */,
-				725F076A29E080BA00416E08 /* PersistenceController.swift in Sources */,
 				72458D9C2B1C7519000F1AD0 /* GradebookViewModel.swift in Sources */,
 				72A84B812AF2C4AC0033367A /* CourseInfoView.swift in Sources */,
-				725F077429E085F700416E08 /* PupilStorage.xcdatamodeld in Sources */,
 				7203732A29BE61F5006D83BB /* SettingsAliasManager.swift in Sources */,
 				7270D5CE29B11C3F00E8BF85 /* Color.swift in Sources */,
 				723A01512B028C4D0001FDC1 /* Double.swift in Sources */,
@@ -744,10 +739,11 @@
 				72606EC7299C281600CFB306 /* GradebookView.swift in Sources */,
 				72C9E5922B266B17005E50F6 /* PupilView.swift in Sources */,
 				72AA10662B1ED761001E7C20 /* OtherInfoView.swift in Sources */,
+				72ED35A42BA7B127008136ED /* AliasLink.swift in Sources */,
+				72ED35A52BA7B127008136ED /* Alias.swift in Sources */,
 				729DC2CB29A7CF23006A4190 /* TodayScheduleListItemView.swift in Sources */,
 				729DC2D429AD97C4006A4190 /* SettingsView.swift in Sources */,
 				72DB032D2B90EC7B00770849 /* LogoutAction.swift in Sources */,
-				7203733129BFA280006D83BB /* EditAliasView.swift in Sources */,
 				72392CB12B78585B002F6188 /* GradeBreakdownChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1118,19 +1114,6 @@
 			productName = Defaults;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		725F074529E07B4000416E08 /* PupilStorage.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				725F074629E07B4000416E08 /* PupilStorage.xcdatamodel */,
-			);
-			currentVersion = 725F074629E07B4000416E08 /* PupilStorage.xcdatamodel */;
-			path = PupilStorage.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 72FCD992293ABDDF00A51FE4 /* Project object */;
 }

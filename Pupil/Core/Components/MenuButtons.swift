@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct GiveAliasButton: View {
     @Binding var showingSheet: Bool
@@ -19,10 +20,12 @@ struct GiveAliasButton: View {
 }
 
 struct RemoveAliasLinkButton: View {
+    @Environment(\.modelContext) private var context
     var link: AliasLink
     var body: some View {
         Button(role: .destructive) {
-            PersistenceController.shared.delete(link)
+            context.delete(link)
+            WidgetCenter.shared.reloadAllTimelines()
         } label: {
             Label(String(localized: "REMOVE_ALIAS_BUTTON", defaultValue: "Remove Alias", comment: "Button to remove an alias"), systemImage: "trash")
         }

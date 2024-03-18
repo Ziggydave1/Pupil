@@ -8,14 +8,19 @@
 import SwiftUI
 import SwiftVue
 import Defaults
+import SwiftData
 
 struct CourseRowView: View {
     @Default(.gradeColors) private var gradeColors
     @State private var showingAliasChooser: Bool = false
     var course: Course
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.key)]) private var aliasLinks: FetchedResults<AliasLink>
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.name)]) private var aliases: FetchedResults<Alias>
+    @Query private var aliasLinks: [AliasLink]
+    
+    init(course: Course) {
+        self.course = course
+        self._aliasLinks = Query(filter: #Predicate<AliasLink> { $0.key == course.title }, animation: .default)
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -49,8 +54,8 @@ struct CourseRowView: View {
         .contextMenu {
             GiveAliasButton(showingSheet: $showingAliasChooser)
             
-            if let aliasLink {
-                RemoveAliasLinkButton(link: aliasLink)
+            if let link = aliasLinks.first {
+                RemoveAliasLinkButton(link: link)
             }
             
             Divider()
@@ -62,12 +67,8 @@ struct CourseRowView: View {
         }
     }
     
-    private var aliasLink: AliasLink? {
-        return aliasLinks.first { $0.key == course.title }
-    }
-    
     private var alias: Alias? {
-        return aliases.first(where: { $0.objectID == aliasLink?.value?.objectID })
+        return aliasLinks.first?.value
     }
 }
 

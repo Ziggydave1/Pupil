@@ -9,8 +9,10 @@ import SwiftUI
 import SwiftVue
 import WidgetKit
 import Defaults
+import SwiftData
 
-struct CourseWidgetView : View {
+struct CourseWidgetView: View {
+    @Query private var aliasLinks: [AliasLink]
     @Environment(\.widgetFamily) var family
     @Environment(\.colorScheme) var colorScheme
     var entry: CourseWidgetEntry
@@ -19,7 +21,7 @@ struct CourseWidgetView : View {
         switch entry.result {
         case .success(let course):
             if let mark = course.marks.first {
-                let alias = PersistenceController.shared.alias(for: course.title)
+                let alias = aliasLinks.first(where: { $0.key == course.title })?.value
                 let courseName = alias?.name ?? course.title
                 let courseIcon = alias?.icon ?? "studentdesk"
                 switch family {

@@ -44,42 +44,6 @@
         }
       }
     },
-    "ADDING_ALIAS_ERROR" : {
-      "comment" : "An error has occured adding the alias",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Error adding alias"
-          }
-        }
-      }
-    },
-    "ADDING_ALIAS_ERROR_ACK" : {
-      "comment" : "Acknowledgement of an error that occured while adding an alias, does not do anything but dismiss",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Ok"
-          }
-        }
-      }
-    },
-    "ALIAS_ADDER_NAME_FIELD" : {
-      "comment" : "Label for the name field when adding an alias",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Name"
-          }
-        }
-      }
-    },
     "ALIAS_DESCRIPTION" : {
       "comment" : "Description of what an alias is for new users",
       "extractionState" : "extracted_with_value",
@@ -92,8 +56,8 @@
         }
       }
     },
-    "ALIAS_EDITOR_NAME_FIELD" : {
-      "comment" : "Label for the name field when editing an alias",
+    "ALIAS_EDITOR_NAME" : {
+      "comment" : "Label for the name field in the alias editor",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
@@ -706,30 +670,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Done"
-          }
-        }
-      }
-    },
-    "EDITING_ALIAS_ERROR" : {
-      "comment" : "An error has occured editing the alias",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Error editing alias"
-          }
-        }
-      }
-    },
-    "EDITING_ALIAS_ERROR_ACK" : {
-      "comment" : "Acknowledgement of an error that occured while editing an alias, does not do anything but dismiss",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Ok"
           }
         }
       }
@@ -1846,18 +1786,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Teal"
-          }
-        }
-      }
-    },
-    "UNKNOWN_ALIAS" : {
-      "comment" : "A stored alias doesn't have a name",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Unknown"
           }
         }
       }
