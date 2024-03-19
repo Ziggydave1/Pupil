@@ -1,9 +1,6 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "" : {
-
-    },
     "%@" : {
 
     },
@@ -428,12 +425,6 @@
         }
       }
     },
-    "Course Configuration" : {
-
-    },
-    "Course Name" : {
-
-    },
     "COURSE_ASSIGNMENTS_OR_BREAKDOWN_PICKER" : {
       "comment" : "Label for the picker to switch between viewing assignments and the grade breakdown",
       "extractionState" : "extracted_with_value",
@@ -610,6 +601,42 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Reverse"
+          }
+        }
+      }
+    },
+    "COURSE_WIDGET_CONFIG_INTENT_DESC" : {
+      "comment" : "The description of the widget configuration app intent",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Configure widget to display a selected course"
+          }
+        }
+      }
+    },
+    "COURSE_WIDGET_CONFIG_INTENT_TITLE" : {
+      "comment" : "The title of the widget configuration app intent",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Course Configuration"
+          }
+        }
+      }
+    },
+    "COURSE_WIDGET_CONFIG_NAME_PARAM" : {
+      "comment" : "The course name parameter for the widget configuration app intent",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Course Name"
           }
         }
       }

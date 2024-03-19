@@ -12,10 +12,10 @@ import Defaults
 struct CourseConfiguration: AppIntent, WidgetConfigurationIntent, CustomIntentMigratedAppIntent {
     static let intentClassName = "CourseConfigurationIntent"
 
-    static var title: LocalizedStringResource = "Course Configuration"
-    static var description = IntentDescription("")
+    static var title = LocalizedStringResource("COURSE_WIDGET_CONFIG_INTENT_TITLE", defaultValue: "Course Configuration", comment: "The title of the widget configuration app intent")
+    static var description = IntentDescription(LocalizedStringResource("COURSE_WIDGET_CONFIG_INTENT_DESC", defaultValue: "Configure widget to display a selected course", comment: "The description of the widget configuration app intent"))
 
-    @Parameter(title: "Course Name", optionsProvider: StringOptionsProvider())
+    @Parameter(title: LocalizedStringResource("COURSE_WIDGET_CONFIG_NAME_PARAM", defaultValue: "Course Name", comment: "The course name parameter for the widget configuration app intent"), optionsProvider: StringOptionsProvider())
     var courseName: String?
 
     struct StringOptionsProvider: DynamicOptionsProvider {
