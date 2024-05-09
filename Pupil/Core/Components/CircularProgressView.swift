@@ -9,7 +9,7 @@ import SwiftUI
 import Defaults
 
 struct CircularProgressView: View {
-    @Default(.gradeColors) var gradeColors
+    @Default(.gradeColors) private var gradeColors
     let progress: CGFloat
     let lineWidth: CGFloat
     

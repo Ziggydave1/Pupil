@@ -31,7 +31,7 @@ struct DotProgressView: View {
             Dot(y: y)
                 .animation(.easeInOut(duration: 0.5).repeatForever().delay(0.4), value: y)
         }
-        .onAppear{y = 1.2}
+        .onAppear{ y = 1.2 }
     }
 }
 

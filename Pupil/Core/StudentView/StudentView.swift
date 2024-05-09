@@ -9,8 +9,9 @@ import SwiftUI
 import SwiftVue
 
 struct StudentView: View {
-    @EnvironmentObject private var vm: StudentViewModel
     @Environment(\.logout) private var logout
+    @Environment(StudentViewModel.self) private var vm
+    
     var body: some View {
         NavigationStack {
             List {
@@ -109,5 +110,5 @@ struct StudentView: View {
 
 #Preview("StudentView") {
     StudentView()
-        .environmentObject(StudentViewModel(Credentials.preview))
+        .environment(StudentViewModel(Credentials.preview))
 }

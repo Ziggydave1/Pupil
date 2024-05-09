@@ -11,6 +11,7 @@ import Charts
 
 struct GradeBreakdownChartView: View {
     var summary: [GradeCalculationPart]
+    
     var body: some View {
         let sorted = summary
             .sorted {
@@ -22,6 +23,7 @@ struct GradeBreakdownChartView: View {
                     return $0.name < $1.name
                 }
             }
+        
         let chartData = sorted
             .filter { $0.name != "TOTAL" }
         

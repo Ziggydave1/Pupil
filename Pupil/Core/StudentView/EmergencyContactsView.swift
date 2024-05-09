@@ -10,6 +10,7 @@ import SwiftVue
 
 struct EmergencyContactsView: View {
     let info: StudentInfo
+    
     var body: some View {
         ForEach(info.emergencyContacts) { contact in
             StudentInfoRowView(image: "person.fill", color: .red, name: contact.relationship, value: contact.name)

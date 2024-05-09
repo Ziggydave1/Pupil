@@ -26,6 +26,7 @@ struct AccentColorChooser: View {
         String(localized: "PINK", defaultValue: "Pink", comment: "Name for pink"),
         String(localized: "BROWN", defaultValue: "Brown", comment: "Name for brown")
     ]
+    
     var body: some View {
         List {
             ForEach(0..<colors.count, id: \.self) { index in

@@ -8,12 +8,14 @@
 import SwiftUI
 import SwiftVue
 import Defaults
+import Observation
 
 struct GradebookView: View {
-    @EnvironmentObject private var vm: GradebookViewModel
     @Environment(\.logout) private var logout
+    @Environment(GradebookViewModel.self) private var vm
     
     var body: some View {
+        @Bindable var vm = vm
         NavigationStack {
             List {
                 Picker(String(localized: "GRADEBOOK_GRADING_PERIOD_PICKER", defaultValue: "Grading Period", comment: "The label for the grading period picker"), selection: $vm.gradebookPeriod) {
@@ -67,11 +69,15 @@ struct GradebookView: View {
                 }
             }
         }
-        .onChange(of: vm.gradebookPeriod) { _, newPeriod in
-            if newPeriod?.name != vm.gradebook?.reportingPeriod.name {
-                Task {
-                    await vm.loadData(termIndex: newPeriod?.index)
-                }
+        .onChange(of: vm.gradebookPeriod) { oldValue, newValue in
+            guard let oldValue else { return }
+            if oldValue.name != newValue?.name {
+                vm.shouldViewLoadData = true
+            }
+        }
+        .task(id: vm.shouldViewLoadData) {
+            if vm.shouldViewLoadData {
+                await vm.loadData()
             }
         }
     }
@@ -79,5 +85,5 @@ struct GradebookView: View {
 
 #Preview("GradebookView") {
     GradebookView()
-        .environmentObject(GradebookViewModel(Credentials.preview))
+        .environment(GradebookViewModel(Credentials.preview))
 }

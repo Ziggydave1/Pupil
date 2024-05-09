@@ -11,31 +11,30 @@ import Defaults
 
 struct HomeView: View {
     @Default(.accentColor) private var accentColor
+    @State private var gradebookVM: GradebookViewModel
+    @State private var scheduleVM: ScheduleViewModel
+    @State private var studentVM: StudentViewModel
     private let credentials: Credentials
-    
-    @StateObject private var gradebookVM: GradebookViewModel
-    @StateObject private var scheduleVM: ScheduleViewModel
-    @StateObject private var studentVM: StudentViewModel
     
     init(credentials: Credentials) {
         self.credentials = credentials
-        self._gradebookVM = StateObject(wrappedValue: GradebookViewModel(credentials))
-        self._scheduleVM = StateObject(wrappedValue: ScheduleViewModel(credentials))
-        self._studentVM = StateObject(wrappedValue: StudentViewModel(credentials))
+        self.gradebookVM = GradebookViewModel(credentials)
+        self.scheduleVM = ScheduleViewModel(credentials)
+        self.studentVM = StudentViewModel(credentials)
     }
     
     var body: some View {
         TabView {
             GradebookView()
-                .environmentObject(gradebookVM)
+                .environment(gradebookVM)
                 .tabItem { Label(String(localized: "HOME_TAB_GRADEBOOK", defaultValue: "Gradebook", comment: "The gradebook tab"), systemImage: "menucard.fill") }
             
             ScheduleView()
-                .environmentObject(scheduleVM)
+                .environment(scheduleVM)
                 .tabItem { Label(String(localized: "HOME_TAB_SCHEDULE", defaultValue: "Schedule", comment: "The schedule tab"), systemImage: "list.bullet.rectangle.portrait.fill") }
             
             StudentView()
-                .environmentObject(studentVM)
+                .environment(studentVM)
                 .tabItem { Label(String(localized: "HOME_TAB_STUDENT_INFO", defaultValue: "Me", comment: "The me (student info) tab"), systemImage: "person.circle.fill") }
             
             SettingsView(credentials: credentials)

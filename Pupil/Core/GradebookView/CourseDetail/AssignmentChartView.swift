@@ -11,8 +11,9 @@ import Charts
 import Defaults
 
 struct AssignmentChartView: View {
-    @Default(.gradeColors) var gradeColors
+    @Default(.gradeColors) private var gradeColors
     var assignments: [Assignment]
+    
     var body: some View {
         let chartData = assignments
             .filter { $0.score != "Not Graded" }

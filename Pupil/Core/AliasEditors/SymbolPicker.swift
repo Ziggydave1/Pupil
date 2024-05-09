@@ -10,7 +10,8 @@ import Symbols
 
 struct SymbolPicker: View {
     @Binding var icon: String
-    let columns = [GridItem(.adaptive(minimum: 50))]
+    private let columns = [GridItem(.adaptive(minimum: 50))]
+    
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, alignment: .center, pinnedViews: .sectionHeaders) {
@@ -45,13 +46,12 @@ struct SymbolPicker: View {
     }
     
     struct IconList: Identifiable {
+        var id: UUID = UUID()
         var name: String
         var icons: [String]
-        
-        var id: UUID = UUID()
     }
     
-    let icons: [IconList] = [
+    private let icons: [IconList] = [
         IconList(name: String(localized: "ICON_LIST_SECTION_TITLE_GENERAL", defaultValue: "General", comment: "Section for general icons in the alias icon picker"), icons: ["building.2", "scribble", "doc", "doc.text", "doc.richtext", "doc.plaintext", "doc.append", "calendar", "book", "books.vertical", "book.closed", "character.book.closed", "text.book.closed", "magazine", "newspaper", "graduationcap", "ruler", "studentdesk", "paperclip", "bubble.left", "quote.bubble"]),
         IconList(name: String(localized: "ICON_LIST_SECTION_TITLE_SCIENCE", defaultValue: "Science", comment: "Section for science icons in the alias icon picker"), icons: ["atom", "scalemass", "bandage", "pills", "testtube.2", "pawprint", "leaf", "gearshape.2", "lungs", "allergens", "brain.head.profile", "brain", "bolt", "stethoscope", "burst", "waveform.path"]),
         IconList(name: String(localized: "ICON_LIST_SECTION_TITLE_MATH", defaultValue: "Math", comment: "Section for math icons in the alias icon picker"), icons: ["function", "chart.pie", "chart.line.uptrend.xyaxis", "cube.transparent", "infinity", "square.on.circle", "x.squareroot", "torus", "sum", "plus.forwardslash.minus"]),

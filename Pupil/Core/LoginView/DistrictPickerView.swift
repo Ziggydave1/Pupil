@@ -15,21 +15,9 @@ struct DistrictPickerView: View {
     @State private var loading: Bool = false
     @State private var districts: [DistrictInfo] = []
     @State private var error: Error?
-    
     @State private var searchTask: Task<Void, Never>?
-    
-    @State private var path: [DistrictInfo]
-    
+    @State private var path: [DistrictInfo] = []
     @Binding var credentials: Credentials?
-    
-    init(credentials: Binding<Credentials?>) {
-        self._credentials = credentials
-        if let district = Defaults[.district] {
-            self.path = [district]
-        } else {
-            self.path = []
-        }
-    }
     
     var body: some View {
         NavigationStack(path: $path) {

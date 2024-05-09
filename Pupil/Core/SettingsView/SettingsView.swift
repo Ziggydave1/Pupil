@@ -13,8 +13,9 @@ import KeychainAccess
 
 struct SettingsView: View {
     @Environment(\.logout) private var logout
-    let credentials: Credentials
     @Default(.gradeColors) var gradeColors
+    let credentials: Credentials
+    
     var body: some View {
         NavigationStack {
             List {

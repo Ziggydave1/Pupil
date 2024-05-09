@@ -10,11 +10,12 @@ import Foundation
 import SwiftData
 
 
-@Model public class AliasLink {
+@Model class AliasLink {
     @Attribute(.unique) var key: String
     var value: Alias?
     
-    public init(key: String) {
+    init(key: String, value: Alias) {
         self.key = key
+        self.value = value
     }
 }

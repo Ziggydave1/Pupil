@@ -12,6 +12,7 @@ import Defaults
 struct GradeBreakdownView: View {
     @Default(.gradeColors) private var gradeColors
     var summary: [GradeCalculationPart]
+    
     var body: some View {
         let sorted = summary
             .sorted {
@@ -23,6 +24,7 @@ struct GradeBreakdownView: View {
                     return $0.name < $1.name
                 }
             }
+        
         ForEach(sorted) { part in
             DisclosureGroup {
                 LabeledContent(String(localized: "BREAKDOWN_POINTS", defaultValue: "Points", comment: "The points recieved out of the points possible for the category")) {

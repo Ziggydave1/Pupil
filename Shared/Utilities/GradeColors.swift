@@ -25,7 +25,6 @@ struct GradeColors: Codable, Defaults.Serializable {
     init(stops: [GradeColorStop], default color: Color = .gray) {
         self.stops = stops
         defaultColor = color
-        
     }
     
     mutating func add(stop: GradeColorStop) {

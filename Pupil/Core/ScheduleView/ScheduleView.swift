@@ -7,12 +7,14 @@
 
 import SwiftUI
 import SwiftVue
+import Observation
 
 struct ScheduleView: View {
-    @EnvironmentObject private var vm: ScheduleViewModel
     @Environment(\.logout) private var logout
+    @Environment(ScheduleViewModel.self) private var vm
     
     var body: some View {
+        @Bindable var vm = vm
         NavigationStack {
             List {
                 Picker(String(localized: "SCHEDULE_TYPE_PICKER", defaultValue: "Schedule Type", comment: "Picker for the schedule type"), selection: $vm.selectedSchedule) {
@@ -68,11 +70,15 @@ struct ScheduleView: View {
                 }
             }
         }
-        .onChange(of: vm.selectedTerm) { _, newTerm in
-            if newTerm?.termIndex != vm.schedule?.termIndex {
-                Task {
-                    await vm.loadData(termIndex: newTerm?.termIndex)
-                }
+        .onChange(of: vm.selectedTerm) { oldTerm, newTerm in
+            guard let oldTerm else { return }
+            if oldTerm.termIndex != newTerm?.termIndex {
+                vm.shouldViewLoadData = true
+            }
+        }
+        .task(id: vm.shouldViewLoadData) {
+            if vm.shouldViewLoadData {
+                await vm.loadData()
             }
         }
     }
@@ -80,5 +86,5 @@ struct ScheduleView: View {
 
 #Preview("ScheduleView") {
     ScheduleView()
-        .environmentObject(ScheduleViewModel(Credentials.preview))
+        .environment(ScheduleViewModel(Credentials.preview))
 }

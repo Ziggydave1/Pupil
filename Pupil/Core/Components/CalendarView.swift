@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftVue
 
+/*
 struct AttendanceView: View {
     @State private var attendance: Attendance?
     @State private var loading: Bool = false
@@ -141,14 +142,15 @@ struct CalendarView: UIViewRepresentable {
                 return nil
             }
             
-            switch absence.dailyIconName {
-            case "icon_unexcused.gif":
-                return .default(color: .systemRed)
-            case "icon_excused.gif":
-                return .default(color: .systemGreen)
-            default:
-                return .default()
-            }
+//            switch absence.dailyIconName {
+//            case "icon_unexcused.gif":
+//                return .default(color: .systemRed)
+//            case "icon_excused.gif":
+//                return .default(color: .systemGreen)
+//            default:
+//                return .default()
+//            }
+            return nil
         }
         
         func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
@@ -178,3 +180,4 @@ struct CalendarView: UIViewRepresentable {
         }
     }
 }
+*/

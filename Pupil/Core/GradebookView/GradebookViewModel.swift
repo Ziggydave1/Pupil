@@ -8,13 +8,16 @@
 import Foundation
 import SwiftVue
 import Defaults
+import Observation
 
-class GradebookViewModel: ObservableObject {
-    @Published var gradebook: Gradebook?
-    @Published var gradebookPeriod: ReportPeriod?
-    @Published var reportingPeriods: [ReportPeriod] = []
-    @Published var loading: Bool = false
-    @Published var error: Error?
+@Observable
+class GradebookViewModel {
+    var gradebook: Gradebook?
+    var gradebookPeriod: ReportPeriod?
+    var reportingPeriods: [ReportPeriod] = []
+    var loading: Bool = false
+    var error: Error?
+    var shouldViewLoadData = false
     private let credentials: Credentials
     
     init(_ credentials: Credentials) {
@@ -26,24 +29,25 @@ class GradebookViewModel: ObservableObject {
     }
     
     @MainActor
-    func loadData(termIndex: Int? = nil) async {
+    func loadData() async {
         loading = true
-        await getGradebook(termIndex: termIndex)
+        await getGradebook()
         loading = false
+        shouldViewLoadData = false
     }
     
     @MainActor
     func refresh() async {
         if !loading {
-            await getGradebook(termIndex: gradebookPeriod?.index)
+            await getGradebook()
         }
     }
     
     @MainActor
-    private func getGradebook(termIndex: Int? = nil) async {
+    private func getGradebook() async {
         gradebook = nil
         do {
-            let result = try await studentVue.getGradebook(reportPeriod: termIndex)
+            let result = try await studentVue.getGradebook(reportPeriod: gradebookPeriod?.index)
             gradebook = result
             Defaults[.courseList] = result.courses.map({ $0.title })
             error = nil

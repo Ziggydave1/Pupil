@@ -8,14 +8,17 @@
 import Foundation
 import SwiftVue
 import Defaults
+import Observation
 
-class ScheduleViewModel: ObservableObject {
-    @Published var schedule: Schedule?
-    @Published var selectedSchedule = Defaults[.openToTodaySchedule] ? "Today" : "Term"
-    @Published var selectedTerm: TermListing?
-    @Published var termListings: [TermListing] = []
-    @Published var loading: Bool = false
-    @Published var error: Error?
+@Observable
+class ScheduleViewModel {
+    var schedule: Schedule?
+    var selectedSchedule = Defaults[.openToTodaySchedule] ? "Today" : "Term"
+    var selectedTerm: TermListing?
+    var termListings: [TermListing] = []
+    var loading: Bool = false
+    var error: Error?
+    var shouldViewLoadData = false
     private let credentials: Credentials
     
     init(_ credentials: Credentials) {
@@ -27,24 +30,25 @@ class ScheduleViewModel: ObservableObject {
     }
     
     @MainActor
-    func loadData(termIndex: Int? = nil) async {
+    func loadData() async {
         loading = true
-        await getSchedule(termIndex: termIndex)
+        await getSchedule()
         loading = false
+        shouldViewLoadData = false
     }
     
     @MainActor
     func refresh() async {
         if !loading {
-            await getSchedule(termIndex: selectedTerm?.termIndex)
+            await getSchedule()
         }
     }
     
     @MainActor
-    private func getSchedule(termIndex: Int? = nil) async {
+    private func getSchedule() async {
         schedule = nil
         do {
-            let result = try await studentVue.getSchedule(termIndex: termIndex)
+            let result = try await studentVue.getSchedule(termIndex: selectedTerm?.termIndex)
             schedule = result
             error = nil
             selectedTerm = result.termLists.first(where: { $0.termIndex == result.termIndex })

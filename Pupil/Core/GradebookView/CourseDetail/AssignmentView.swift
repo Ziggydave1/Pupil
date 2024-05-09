@@ -10,8 +10,9 @@ import SwiftVue
 import Defaults
 
 struct AssignmentView: View {
-    @Default(.gradeColors) var gradeColors
+    @Default(.gradeColors) private var gradeColors
     var assignment: Assignment
+    
     var body: some View {
         DisclosureGroup {
             HStack {

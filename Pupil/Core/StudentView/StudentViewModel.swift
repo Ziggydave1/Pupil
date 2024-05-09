@@ -7,11 +7,13 @@
 
 import Foundation
 import SwiftVue
+import Observation
 
-class StudentViewModel: ObservableObject {
-    @Published var studentInfo: StudentInfo?
-    @Published var loading: Bool = false
-    @Published var error: Error?
+@Observable
+class StudentViewModel {
+    var studentInfo: StudentInfo?
+    var loading: Bool = false
+    var error: Error?
     private let credentials: Credentials
     
     init(_ credentials: Credentials) {

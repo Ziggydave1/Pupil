@@ -49,6 +49,7 @@ struct CourseWidgetSmall: View {
     @Default(.gradeColors) var gradeColors
     let mark: Mark
     let courseName: String
+    
     var body: some View {
         VStack {
             ZStack {
@@ -88,6 +89,7 @@ struct CourseWidgetMedium: View {
     let mark: Mark
     let courseName: String
     let courseIcon: String
+    
     var body: some View {
         VStack(spacing: 6) {
             HStack {

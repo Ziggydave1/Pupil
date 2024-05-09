@@ -11,11 +11,9 @@ import WidgetKit
 struct AliasEditor: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
-    
-    let alias: Alias?
-    
     @State private var name: String = ""
     @State private var icon: String = "studentdesk"
+    let alias: Alias?
     
     private var editorDoneButtonText: String {
         if alias == nil {
@@ -80,6 +78,6 @@ struct AliasEditor: View {
     }
 }
 
-#Preview {
+#Preview("AliasEditor") {
     AliasEditor(alias: nil)
 }

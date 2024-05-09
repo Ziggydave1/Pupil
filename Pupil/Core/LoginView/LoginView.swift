@@ -23,7 +23,6 @@ struct LoginView: View {
     let district: DistrictInfo
     @Binding var credentials: Credentials?
     @Binding var path: [DistrictInfo]
-    
     @State private var biometricTask: AnyCancellable?
     @State private var showingUseBiometricsAlert: Bool = false
     

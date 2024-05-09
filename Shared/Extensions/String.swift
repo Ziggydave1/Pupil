@@ -25,5 +25,4 @@ extension String {
             .replacingOccurrences(of: "&#xA", with: "")
             .replacingOccurrences(of: "&amp;", with: "&")
     }
-
 }

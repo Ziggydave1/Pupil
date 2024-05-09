@@ -10,6 +10,7 @@ import SwiftVue
 
 struct IDCardRowView: View {
     let info: StudentInfo
+    
     var body: some View {
         HStack {
             if let data = Data(base64Encoded: info.base64Photo), let uiImage = UIImage(data: data) {

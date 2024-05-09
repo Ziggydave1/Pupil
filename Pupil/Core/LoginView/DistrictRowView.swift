@@ -12,6 +12,7 @@ import Defaults
 struct DistrictRowView: View {
     @Default(.accentColor) private var accentColor
     let district: DistrictInfo
+    
     var body: some View {
         HStack {
             Image(systemName: "building.2.fill")

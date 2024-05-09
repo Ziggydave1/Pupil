@@ -11,14 +11,11 @@ import WidgetKit
 import SwiftData
 
 struct SelectAliasSheet: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
-    
     @Query(sort: \Alias.name, order: .forward) private var aliases: [Alias]
-    
-    let key: String
     @State private var showingAddAlias: Bool = false
-    @State private var showingAlert: Bool = false
+    let key: String
     
     var body: some View {
         NavigationStack {
@@ -26,9 +23,7 @@ struct SelectAliasSheet: View {
                 List {
                     ForEach(aliases) { alias in
                         Button {
-                            let newLink = AliasLink(key: key)
-                            newLink.value = alias
-                            
+                            let newLink = AliasLink(key: key, value: alias)
                             context.insert(newLink)
                             WidgetCenter.shared.reloadAllTimelines()
                             dismiss()
@@ -49,10 +44,8 @@ struct SelectAliasSheet: View {
                 .navigationTitle(String(localized: "ALIASES_NAV_TITLE", defaultValue: "Aliases", comment: "Navigation title for the page where someone can select an alias to use"))
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
-                        Button {
+                        Button(String(localized: "SHOW_ADD_ALIAS_SCREEN", defaultValue: "Add Alias", comment: "Shows the add alias screen"), systemImage: "plus") {
                             showingAddAlias = true
-                        } label: {
-                            Image(systemName: "plus")
                         }
                     }
                 }
@@ -64,11 +57,6 @@ struct SelectAliasSheet: View {
                         .multilineTextAlignment(.center)
                         .foregroundColor(.secondary)
                         .padding()
-                }
-            }
-            .alert(String(localized: "SETTING_ALIAS_ERROR", defaultValue: "Error setting alias", comment: "An error has occured setting the alias"), isPresented: $showingAlert) {
-                Button(String(localized: "SETTING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while setting an alias, does not do anything but dismiss"), role: .cancel) {
-                    dismiss()
                 }
             }
         }

@@ -10,6 +10,7 @@ import SwiftVue
 
 struct DoctorsView: View {
     let info: StudentInfo
+    
     var body: some View {
         if !info.physician.name.isEmpty {
             StudentInfoRowView(image: "facemask.fill", color: .blue, name: String(localized: "DOCTORS_PHYSICAIN_LABEL", defaultValue: "Physician", comment: "Physician label for the doctors page"), value: info.physician.name)

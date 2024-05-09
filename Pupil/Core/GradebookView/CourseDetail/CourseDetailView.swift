@@ -11,8 +11,8 @@ import Defaults
 import SwiftData
 
 struct CourseDetailView: View {
-    @Default(.gradeColors) var gradeColors
-    var course: Course
+    @Default(.gradeColors) private var gradeColors
+    private var course: Course
     @State private var selectedMark: Mark
     @State private var selectedTab: String = "Assignments"
     @State private var showAliasSheet: Bool = false
@@ -40,8 +40,8 @@ struct CourseDetailView: View {
     
     init(course: Course) {
         self.course = course
-        self._selectedMark = State(initialValue: course.marks.first!)
-        self._assignments = State(initialValue: course.marks.first!.assignments.sorted(using: KeyPathComparator(\Assignment.date)))
+        self.selectedMark = course.marks.first!
+        self.assignments = course.marks.first!.assignments.sorted(using: KeyPathComparator(\Assignment.date))
         self._aliasLinks = Query(filter: #Predicate<AliasLink> { $0.key == course.title }, animation: .default)
     }
     
@@ -53,7 +53,6 @@ struct CourseDetailView: View {
                 VStack(spacing: 0) {
                     HStack {
                         Text(selectedMark.scoreString)
-                        
                         
                         if selectedMark.scoreString != "N/A" {
                             Text(selectedMark.scoreRaw.rawScoreFormatted())
@@ -174,10 +173,10 @@ struct CourseDetailView: View {
     }
     
     private var alias: Alias? {
-        return aliasLinks.first?.value
+        aliasLinks.first?.value
     }
     
-    func sort(assignments: [Assignment]) {
+    private func sort(assignments: [Assignment]) {
         switch sortingKey {
         case .date:
             self.assignments = assignments.sorted(using: KeyPathComparator(\Assignment.date, order: order))

@@ -11,12 +11,11 @@ import Defaults
 import SwiftData
 
 struct TodayScheduleListItemView: View {
-    let classInfo: ClassInfo
-    let currentDate: Date
     @State private var showingAliasChooser: Bool = false
     @State private var showEmail: Bool = false
-    
     @Query private var aliasLinks: [AliasLink]
+    let classInfo: ClassInfo
+    let currentDate: Date
     
     init(classInfo: ClassInfo, currentDate: Date) {
         self.classInfo = classInfo
@@ -60,7 +59,9 @@ struct TodayScheduleListItemView: View {
                     }
                 }
                 .padding(4)
+                
                 Spacer()
+                
                 if classInfo.period <= 50 {
                     Image(systemName: "\(classInfo.period).circle.fill")
                         .frame(width: 42, height: 42, alignment: .center)
@@ -73,6 +74,7 @@ struct TodayScheduleListItemView: View {
                         .foregroundColor(classInfo.startDate < currentDate ? classInfo.endDate < currentDate ? .green : .yellow : .gray)
                 }
             }
+            
             let progress = CGFloat((currentDate.timeIntervalSince1970 - classInfo.startDate.timeIntervalSince1970) / (classInfo.endDate.timeIntervalSince1970 - classInfo.startDate.timeIntervalSince1970))
             HStack {
                 Text(classInfo.startDate, style: .time)

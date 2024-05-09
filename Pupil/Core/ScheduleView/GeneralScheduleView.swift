@@ -10,6 +10,7 @@ import SwiftVue
 
 struct GeneralScheduleView: View {
     let schedule: Schedule
+    
     var body: some View {
         if !schedule.classLists.isEmpty || !schedule.concurrentClassSchedules.isEmpty {
             ForEach(schedule.classLists) { classListing in

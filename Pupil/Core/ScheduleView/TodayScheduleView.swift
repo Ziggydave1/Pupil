@@ -10,6 +10,7 @@ import SwiftVue
 
 struct TodayScheduleView: View {
     let todaySchedule: TodayScheduleInfoData
+    
     var body: some View {
         if !todaySchedule.schoolInfos.isEmpty {
             ForEach(todaySchedule.schoolInfos) { schoolInfo in

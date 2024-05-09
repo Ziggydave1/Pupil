@@ -221,18 +221,6 @@
         }
       }
     },
-    "ATTENDANCE_NAV_TITLE" : {
-      "comment" : "Navigation title for the attendance page",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Attendance"
-          }
-        }
-      }
-    },
     "BIOMETRIC_AUTH_REASON" : {
       "comment" : "The reason given when asking the user to authenticate biometricly",
       "extractionState" : "extracted_with_value",
@@ -1313,30 +1301,6 @@
         }
       }
     },
-    "REMOVING_ALIAS_ERROR" : {
-      "comment" : "An error has occured removing the alias",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Error removing alias"
-          }
-        }
-      }
-    },
-    "REMOVING_ALIAS_ERROR_ACK" : {
-      "comment" : "Acknowledgement of an error that occured while removing an alias, does not do anything but dismiss",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Ok"
-          }
-        }
-      }
-    },
     "SCHEDULE_NAV_TITLE" : {
       "comment" : "Navigation title for the schedule page",
       "extractionState" : "extracted_with_value",
@@ -1429,30 +1393,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Schedule Type"
-          }
-        }
-      }
-    },
-    "SETTING_ALIAS_ERROR" : {
-      "comment" : "An error has occured setting the alias",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Error setting alias"
-          }
-        }
-      }
-    },
-    "SETTING_ALIAS_ERROR_ACK" : {
-      "comment" : "Acknowledgement of an error that occured while setting an alias, does not do anything but dismiss",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Ok"
           }
         }
       }
@@ -1621,6 +1561,18 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Schedule"
+          }
+        }
+      }
+    },
+    "SHOW_ADD_ALIAS_SCREEN" : {
+      "comment" : "Shows the add alias screen",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Add Alias"
           }
         }
       }

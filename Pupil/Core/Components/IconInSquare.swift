@@ -10,6 +10,7 @@ import SwiftUI
 struct IconInSquare: View {
     let color: Color
     let image: String
+    
     var body: some View {
         Image(systemName: image)
             .foregroundColor(.white)

@@ -11,14 +11,11 @@ import WidgetKit
 import SwiftData
 
 struct SettingsAliasManager: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var context
+    @Query(sort: \Alias.name, order: .forward) private var aliases: [Alias]
     @State private var showingAddAlias: Bool = false
     @State private var showingConfirmation: Bool = false
-    
-    @Query(sort: \Alias.name, order: .forward) private var aliases: [Alias]
-    
-    @State private var showingAlert: Bool = false
     
     var body: some View {
         ZStack {
@@ -43,10 +40,8 @@ struct SettingsAliasManager: View {
             .listStyle(.inset)
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
-                    Button {
+                    Button(String(localized: "CLEAR_ALL_ALIASES_BUTTON", defaultValue: "Clear All", comment: "Clear all aliases")) {
                         showingConfirmation = true
-                    } label: {
-                        Text(String(localized: "CLEAR_ALL_ALIASES_BUTTON", defaultValue: "Clear All", comment: "Clear all aliases"))
                     }
                     .confirmationDialog(String(localized: "CLEAR_ALL_ALIASES_CONFIRM_MSG", defaultValue: "Clear all aliases?", comment: "Asking for confirmation to clear all aliases"), isPresented: $showingConfirmation) {
                         Button(String(localized: "CLEAR_ALL_ALIASES_FINAL_BUTTON", defaultValue: "Clear Aliases", comment: "Button for the user to confirm that they want to clear all aliases"), role: .destructive) {
@@ -59,13 +54,10 @@ struct SettingsAliasManager: View {
                     
                 }
                 ToolbarItem(placement: .primaryAction) {
-                    Button {
+                    Button(String(localized: "SHOW_ADD_ALIAS_SCREEN", defaultValue: "Add Alias"), systemImage: "plus") {
                         showingAddAlias = true
-                    } label: {
-                        Image(systemName: "plus")
                     }
                 }
-                
             }
             
             if aliases.isEmpty {
@@ -79,11 +71,6 @@ struct SettingsAliasManager: View {
         .sheet(isPresented: $showingAddAlias) {
             AliasEditor(alias: nil)
         }
-        .alert(String(localized: "REMOVING_ALIAS_ERROR", defaultValue: "Error removing alias", comment: "An error has occured removing the alias"), isPresented: $showingAlert) {
-            Button(String(localized: "REMOVING_ALIAS_ERROR_ACK", defaultValue: "Ok", comment: "Acknowledgement of an error that occured while removing an alias, does not do anything but dismiss"), role: .cancel) {
-                dismiss()
-            }
-        }
     }
     
     func delete(at offsets: IndexSet) {
@@ -95,5 +82,7 @@ struct SettingsAliasManager: View {
 }
 
 #Preview("SettingsAliasManager") {
-    SettingsAliasManager()
+    NavigationStack {
+        SettingsAliasManager()
+    }
 }

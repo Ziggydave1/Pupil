@@ -79,6 +79,7 @@ struct ColorChooser: View {
 struct Child: View {
     @Binding var stop: GradeColorStop
     var width: CGFloat
+    
     var body: some View {
         Circle()
             .trim(from: stop.grade / 100, to: 1.0)

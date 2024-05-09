@@ -10,16 +10,14 @@ import SwiftVue
 
 struct CourseInfoView: View {
     @State private var showCopiedNotification: Bool = false
-    let teacher: String
-    let teacherEmail: String
-    let room: String
-    let period: Int
+    private let teacher: String
+    private let teacherEmail: String
+    private let room: String
     
     init(course: Course) {
         self.teacher = course.staff
         self.teacherEmail = course.staffEmail
         self.room = course.room
-        self.period = course.period
     }
     
     var body: some View {

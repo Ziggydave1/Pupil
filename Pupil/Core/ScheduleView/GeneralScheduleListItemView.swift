@@ -11,11 +11,10 @@ import Defaults
 import SwiftData
 
 struct GeneralScheduleListItemView: View {
-    let classListing: ClassListing
     @State private var showingAliasChooser: Bool = false
     @State private var showEmail: Bool = false
-    
     @Query private var aliasLinks: [AliasLink]
+    let classListing: ClassListing
     
     init(classListing: ClassListing) {
         self.classListing = classListing

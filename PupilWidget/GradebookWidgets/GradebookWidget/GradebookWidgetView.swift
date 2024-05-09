@@ -34,6 +34,7 @@ struct GradebookWidgetLarge: View {
     @Query private var aliasLinks: [AliasLink]
     @Default(.gradeColors) var gradeColors
     let grades: Gradebook
+    
     var body: some View {
         VStack(spacing: 15) {
             HStack {

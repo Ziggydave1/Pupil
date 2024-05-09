@@ -13,6 +13,7 @@ import KeychainAccess
 struct PupilView: View {
     @State private var credentials: Credentials?
     @State private var showingLoginView: Bool = true
+    
     var body: some View {
         Group {
             if let credentials {

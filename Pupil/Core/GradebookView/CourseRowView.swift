@@ -13,9 +13,8 @@ import SwiftData
 struct CourseRowView: View {
     @Default(.gradeColors) private var gradeColors
     @State private var showingAliasChooser: Bool = false
-    var course: Course
-    
     @Query private var aliasLinks: [AliasLink]
+    private let course: Course
     
     init(course: Course) {
         self.course = course
@@ -36,6 +35,7 @@ struct CourseRowView: View {
                         .foregroundColor(.gray)
                 }
                 .padding(4)
+                
                 Spacer()
             }
             ForEach(course.marks) { mark in

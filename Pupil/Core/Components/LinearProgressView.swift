@@ -14,12 +14,13 @@ struct LinearProgressView: View {
     
     var body: some View {
         GeometryReader { geometry in
+            let width = max(0, min(geometry.size.width * progress, geometry.size.width))
             ZStack(alignment: .leading) {
                 Capsule()
                     .foregroundColor(.init(.systemGray5))
                 Capsule()
                     .foregroundColor(color)
-                    .frame(width: min(geometry.size.width * progress, geometry.size.width))
+                    .frame(width: width)
             }
         }
         .frame(height: lineWidth)

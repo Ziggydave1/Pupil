@@ -45,12 +45,14 @@ struct IDCardView: View {
                             .foregroundColor(.blue)
                     }
                 }
+                
                 VStack(alignment: .leading) {
                     Text(info.formattedName)
                         .font(.title)
                         .fontWeight(.semibold)
                     Text(String(localized: "ID_CARD_USER_GRADE", defaultValue: "Grade \(info.grade)", comment: "The current grade of the user"))
                 }
+                
                 Spacer()
             }
             .padding(.vertical, 5)

@@ -24,7 +24,9 @@ struct StudentInfoRowView: View {
         HStack {
             IconInSquare(color: color, image: image)
             Text(name)
+            
             Spacer()
+            
             Text(value?.formattedRight() ?? "")
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.trailing)

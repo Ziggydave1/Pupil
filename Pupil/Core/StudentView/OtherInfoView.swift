@@ -10,6 +10,7 @@ import SwiftVue
 
 struct OtherInfoView: View {
     let info: StudentInfo
+    
     var body: some View {
         ForEach(info.userDefinedGroupBoxes) { box in
             Section {

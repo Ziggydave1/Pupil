@@ -7,7 +7,7 @@
       "location" : "https://github.com/sindresorhus/Defaults",
       "state" : {
         "branch" : "main",
-        "revision" : "38925e3cfacf3fb89a81a35b1cd44fd5a5b7e0fa"
+        "revision" : "d8a954e69ff13b0f7805f3757c8f8d0c8ef5a8cb"
       }
     },
     {
@@ -25,7 +25,7 @@
       "location" : "https://github.com/StudentVue/SwiftVue.git",
       "state" : {
         "branch" : "main",
-        "revision" : "0995b860463a06b9af9abffe8b03f0eb9a6c56cd"
+        "revision" : "f9083dc0c99dd4f25317585247b65694b3492235"
       }
     }
   ],
