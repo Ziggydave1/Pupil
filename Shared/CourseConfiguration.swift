@@ -33,5 +33,3 @@ struct CourseConfiguration: AppIntent, WidgetConfigurationIntent, CustomIntentMi
     }
 }
 
-extension IntentDescription: @unchecked Sendable { }
-
