@@ -69,7 +69,7 @@ struct SelectAliasSheet: View {
                     }
                 }
                 .sheet(isPresented: $showingAddAlias) {
-                    AddAliasSheet()
+                    AddAliasSheet(key: key, dismissPicker: dismiss)
                         .navigationBarHidden(true)
                 }
                 if aliases.isEmpty {

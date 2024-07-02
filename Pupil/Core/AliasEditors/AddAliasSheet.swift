@@ -8,6 +8,7 @@
 
 import SwiftUI
 import Defaults
+import WidgetKit
 
 struct AddAliasSheet: View {
     @Environment(\.dismiss) var dismiss
@@ -15,6 +16,13 @@ struct AddAliasSheet: View {
     @State private var name: String = ""
     @State private var icon: String = "studentdesk"
     @State private var showingAlert: Bool = false
+    let key: String?
+    let dismissPicker: DismissAction?
+    
+    init(key: String? = nil, dismissPicker: DismissAction? = nil) {
+        self.key = key
+        self.dismissPicker = dismissPicker
+    }
     
     var body: some View {
         VStack {
@@ -60,6 +68,18 @@ struct AddAliasSheet: View {
                 
                 guard viewContext.hasChanges else { return }
                 
+                if let key {
+                    if let link = PersistenceController.shared.aliasLink(for: key) {
+                        link.value = alias
+                    } else {
+                        let newLink = AliasLink(context: viewContext)
+                        newLink.key = key
+                        newLink.value = alias
+                    }
+                }
+                
+                guard viewContext.hasChanges else { return }
+                
                 do {
                     try viewContext.save()
                 } catch {
@@ -67,6 +87,11 @@ struct AddAliasSheet: View {
                 }
                 
                 dismiss()
+                
+                if key != nil {
+                    WidgetCenter.shared.reloadAllTimelines()
+                    dismissPicker?()
+                }
             }
         }
         .padding(.horizontal)
