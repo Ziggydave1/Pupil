@@ -221,6 +221,21 @@
         }
       }
     },
+    "Attendance" : {
+
+    },
+    "ATTENDANCE_NAV_TITLE" : {
+      "comment" : "Navigation title for the attendance page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Attendance"
+          }
+        }
+      }
+    },
     "BIOMETRIC_AUTH_REASON" : {
       "comment" : "The reason given when asking the user to authenticate biometricly",
       "extractionState" : "extracted_with_value",

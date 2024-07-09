@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftVue
 
-/*
 struct AttendanceView: View {
     @State private var attendance: Attendance?
     @State private var loading: Bool = false
@@ -35,7 +34,6 @@ struct AttendanceView: View {
                     }
                 }
                 .listStyle(.inset)
-                .scrollDisabled(true)
                 .refreshable {
                     Task {
                         let credentials = Credentials(username: "", password: "", districtURL: "")
@@ -113,24 +111,32 @@ struct CalendarView: UIViewRepresentable {
         calendarView.visibleDateComponents = calendar.dateComponents([.day, .month, .year], from: .now)
         calendarView.delegate = context.coordinator
         calendarView.selectionBehavior = UICalendarSelectionSingleDate(delegate: context.coordinator)
-        
         return calendarView
     }
     
     func updateUIView(_ uiView: UICalendarView, context: Context) { }
     
+    func sizeThatFits(_ proposal: ProposedViewSize, uiView: UICalendarView, context: Context) -> CGSize? {
+        var idealSize = uiView.sizeThatFits(proposal.replacingUnspecifiedDimensions())
+        if let width = proposal.width { idealSize.width = width }
+        if let height = proposal.height { idealSize.height = height }
+        uiView.widthAnchor.constraint(equalToConstant: idealSize.width).isActive = true
+        uiView.heightAnchor.constraint(equalToConstant: idealSize.height).isActive = true
+        return idealSize
+    }
+    
     func makeCoordinator() -> CalendarViewCoordinator {
-        CalendarViewCoordinator(calendar: calendar, selectedAbsence: _selectedAbsence, absences: absences)
+        CalendarViewCoordinator(calendar: calendar, selectedAbsence: $selectedAbsence, absences: absences)
     }
     
     class CalendarViewCoordinator: NSObject, UICalendarViewDelegate, UICalendarSelectionSingleDateDelegate {
         let calendar: Calendar
-        let selectedAbsence: Binding<Absence?>
+        @Binding var selectedAbsence: Absence?
         let absences: [Absence]
         
         init(calendar: Calendar, selectedAbsence: Binding<Absence?>, absences: [Absence]) {
             self.calendar = calendar
-            self.selectedAbsence = selectedAbsence
+            self._selectedAbsence = selectedAbsence
             self.absences = absences
         }
         
@@ -142,42 +148,32 @@ struct CalendarView: UIViewRepresentable {
                 return nil
             }
             
-//            switch absence.dailyIconName {
-//            case "icon_unexcused.gif":
-//                return .default(color: .systemRed)
-//            case "icon_excused.gif":
-//                return .default(color: .systemGreen)
-//            default:
-//                return .default()
-//            }
-            return nil
+            switch absence.dailyIconName {
+            case "icon_unexcused.gif":
+                return .default(color: .systemRed)
+            case "icon_excused.gif":
+                return .default(color: .systemGreen)
+            default:
+                return .default()
+            }
         }
         
         func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
             guard let dateToCheck = dateComponents?.date else {
-                if selectedAbsence.wrappedValue != nil {
-                    withAnimation {
-                        selectedAbsence.wrappedValue = nil
-                    }
+                if selectedAbsence != nil {
+                    selectedAbsence = nil
                 }
                 return
             }
             guard let absence = absences.first(where: { calendar.isDate(dateToCheck, inSameDayAs: $0.absenceDate) }) else {
-                if selectedAbsence.wrappedValue != nil {
-                    withAnimation {
-                        selectedAbsence.wrappedValue = nil
-                    }
+                if selectedAbsence != nil {
+                    selectedAbsence = nil
                 }
                 return
             }
-            if selectedAbsence.wrappedValue == nil {
-                withAnimation {
-                    selectedAbsence.wrappedValue = absence
-                }
-            } else {
-                selectedAbsence.wrappedValue = absence
-            }
+            
+            selectedAbsence = absence
         }
     }
 }
-*/
+
