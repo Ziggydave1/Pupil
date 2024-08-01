@@ -33,5 +33,10 @@ struct StudentInfoRowView: View {
 }
 
 #Preview("StudentInfoRowView") {
-    StudentInfoRowView(image: "facemask.fill", color: .blue, name: "Dentist", value: "Ashlee Aragon")
+    StudentInfoRowView(
+        image: "facemask.fill",
+        color: .blue,
+        name: "Dentist",
+        value: "Ashlee Aragon"
+    )
 }

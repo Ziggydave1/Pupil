@@ -4,16 +4,6 @@
     "%@" : {
 
     },
-    "%@%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%1$@%2$@"
-          }
-        }
-      }
-    },
     "%lld" : {
 
     },
@@ -653,6 +643,42 @@
         }
       }
     },
+    "DENTIST_CALL_PHONE" : {
+      "comment" : "Call the dentist's phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "DENTIST_OFFICE_NAME" : {
+      "comment" : "The dentist's office name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "DENTIST_PHONE_NUMBER" : {
+      "comment" : "The phone number for the dentist",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
     "DISTRICT_FINDER_ZIP" : {
       "comment" : "The zip code field",
       "extractionState" : "extracted_with_value",
@@ -677,7 +703,7 @@
         }
       }
     },
-    "DOCTORS_PHYSICAIN_LABEL" : {
+    "DOCTORS_PHYSICIAN_LABEL" : {
       "comment" : "Physician label for the doctors page",
       "extractionState" : "extracted_with_value",
       "localizations" : {
@@ -737,6 +763,54 @@
         }
       }
     },
+    "EMERGENCY_CONTACT_CALL_HOME_PHONE" : {
+      "comment" : "Call the home phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_CALL_MOBILE_PHONE" : {
+      "comment" : "Call the mobile phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_CALL_OTHER_PHONE" : {
+      "comment" : "Call the other phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_CALL_WORK_PHONE" : {
+      "comment" : "Call the work phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
     "EMERGENCY_CONTACT_HOME_PHONE" : {
       "comment" : "The home phone number for the emergency contact",
       "extractionState" : "extracted_with_value",
@@ -744,7 +818,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%@ - Home"
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_HOME_PHONE_LABEL" : {
+      "comment" : "The home phone label",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Home"
           }
         }
       }
@@ -756,7 +842,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%@ - Mobile"
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_MOBILE_PHONE_LABEL" : {
+      "comment" : "The mobile phone label",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Mobile"
           }
         }
       }
@@ -768,7 +866,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%@ - Other"
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_OTHER_PHONE_LABEL" : {
+      "comment" : "The other phone label",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Other"
           }
         }
       }
@@ -780,7 +890,19 @@
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "%@ - Work"
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "EMERGENCY_CONTACT_WORK_PHONE_LABEL" : {
+      "comment" : "The work phone label",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Work"
           }
         }
       }
@@ -1265,6 +1387,42 @@
         }
       }
     },
+    "PHYSICIAN_CALL_PHONE" : {
+      "comment" : "Call the physician's phone number",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Call"
+          }
+        }
+      }
+    },
+    "PHYSICIAN_HOSPITAL_NAME" : {
+      "comment" : "The physician's hospital name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "PHYSICIAN_PHONE_NUMBER" : {
+      "comment" : "The phone number for the physician",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
     "PINK" : {
       "comment" : "Name for pink",
       "extractionState" : "extracted_with_value",
@@ -1709,18 +1867,6 @@
         }
       }
     },
-    "STUDENT_INFO_DOCTORS_LABEL" : {
-      "comment" : "Label for the doctors disclosure group",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Doctors"
-          }
-        }
-      }
-    },
     "STUDENT_INFO_EMAIL_LABEL" : {
       "comment" : "Label for student email",
       "extractionState" : "extracted_with_value",
@@ -1729,18 +1875,6 @@
           "stringUnit" : {
             "state" : "new",
             "value" : "Email"
-          }
-        }
-      }
-    },
-    "STUDENT_INFO_EMERGENCY_CONTACTS_LABEL" : {
-      "comment" : "Label for the emergency contacts disclosure group",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Emergency Contacts"
           }
         }
       }
@@ -1781,18 +1915,6 @@
         }
       }
     },
-    "STUDENT_INFO_OTHER_LABEL" : {
-      "comment" : "Label for the other disclosure group",
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Other"
-          }
-        }
-      }
-    },
     "STUDENT_INFO_PHONE_LABEL" : {
       "comment" : "Label for student phone number",
       "extractionState" : "extracted_with_value",
@@ -1817,14 +1939,38 @@
         }
       }
     },
-    "STUDENT_INFO_SECTION_HEADER_DETAILS" : {
-      "comment" : "The section header fot details in the student info page",
+    "STUDENT_INFO_SECTION_HEADER_DOCTORS" : {
+      "comment" : "The section header for doctors in the student info page",
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "new",
-            "value" : "Details"
+            "value" : "Doctors"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_SECTION_HEADER_EMERGENCY_CONTACTS" : {
+      "comment" : "The section header for emergency contacts in the student info page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Emergency Contacts"
+          }
+        }
+      }
+    },
+    "STUDENT_INFO_SECTION_HEADER_OTHER" : {
+      "comment" : "The section header for other information in the student info page",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Other"
           }
         }
       }
