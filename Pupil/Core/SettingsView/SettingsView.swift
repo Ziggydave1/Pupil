@@ -43,13 +43,21 @@ struct SettingsView: View {
                             .foregroundStyle(.red)
                             .font(.headline)
                     }
-                    NavigationLink {
-                        SettingsAliasManager()
-                    } label: {
-                        Label(String(localized: "SETTINGS_NAV_ALIASES_MANAGER", defaultValue: "Class Names and Icons", comment: "Navigation link to the alias manager page in settings"), systemImage: "studentdesk")
-                            .foregroundStyle(.indigo)
-                            .font(.headline)
+                    
+                    if PersistenceController.shared.enabled {
+                        NavigationLink {
+                            SettingsAliasManager()
+                        } label: {
+                            Label(String(localized: "SETTINGS_NAV_ALIASES_MANAGER", defaultValue: "Class Names and Icons", comment: "Navigation link to the alias manager page in settings"), systemImage: "studentdesk")
+                                .foregroundStyle(.indigo)
+                                .font(.headline)
+                        }
+                    } else {
+                        Label("Error loading alias system", systemImage: "exclamationmark.triangle.fill")
+                            .fontWeight(.bold)
+                            .foregroundStyle(.primary)
                     }
+                    
                     NavigationLink {
                         AccentColorChooser()
                     } label: {

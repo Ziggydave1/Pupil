@@ -7,16 +7,11 @@
 
 import CoreData
 
-struct PersistenceController {
+class PersistenceController {
     static let shared = PersistenceController()
     
-    static var preview: PersistenceController = {
-        let result = PersistenceController(inMemory: true)
-        let viewContext = result.container.viewContext
-        return result
-    }()
-    
     let container: NSPersistentContainer
+    var enabled: Bool = false
     
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "PupilStorage")
@@ -30,11 +25,10 @@ struct PersistenceController {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
         
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
+//        container.loadPersistentStores { [weak self] storeDescription, error in
+//            self?.enabled = error == nil
+//        }
+        
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
     

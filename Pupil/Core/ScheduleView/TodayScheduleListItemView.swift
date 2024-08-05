@@ -82,13 +82,15 @@ struct TodayScheduleListItemView: View {
             .foregroundColor(classInfo.startDate < currentDate ? classInfo.endDate < currentDate ? .green : .yellow : .gray)
         }
         .contextMenu {
-            GiveAliasButton(showingSheet: $showingAliasChooser)
-            
-            if let aliasLink {
-                RemoveAliasLinkButton(link: aliasLink)
+            if PersistenceController.shared.enabled {
+                GiveAliasButton(showingSheet: $showingAliasChooser)
+                
+                if let aliasLink {
+                    RemoveAliasLinkButton(link: aliasLink)
+                }
+                
+                Divider()
             }
-            
-            Divider()
             
             EmailButtons(email: classInfo.teacherEmail)
         }

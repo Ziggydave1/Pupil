@@ -34,7 +34,7 @@ struct GradeColors: Codable, Defaults.Serializable {
     }
     
     func color(for rawScore: Double?, and scoreString: String?) -> Color {
-        if scoreString == "N/A" || scoreString == "Not Graded" {
+        if scoreString == "N/A" || scoreString == "Not Graded" || scoreString == "Not Due" {
             return .gray
         }
         var currentColor = Color.gray

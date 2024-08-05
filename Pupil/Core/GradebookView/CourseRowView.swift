@@ -47,13 +47,15 @@ struct CourseRowView: View {
             .fontWeight(.semibold)
         }
         .contextMenu {
-            GiveAliasButton(showingSheet: $showingAliasChooser)
-            
-            if let aliasLink {
-                RemoveAliasLinkButton(link: aliasLink)
+            if PersistenceController.shared.enabled {
+                GiveAliasButton(showingSheet: $showingAliasChooser)
+                
+                if let aliasLink {
+                    RemoveAliasLinkButton(link: aliasLink)
+                }
+                
+                Divider()
             }
-            
-            Divider()
             
             EmailButtons(email: course.staffEmail)
         }

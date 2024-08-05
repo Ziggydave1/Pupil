@@ -15,7 +15,7 @@ struct AssignmentChartView: View {
     var assignments: [Assignment]
     var body: some View {
         let chartData = assignments
-            .filter { $0.score != "Not Graded" }
+            .filter { $0.score != "Not Graded" && $0.score != "Not Due" }
             .prefix(20)
         VStack(alignment: .leading) {
             Text(String(localized: "ASSIGNMENT_GRAPH_TITLE", defaultValue: "Recent Assignment Grades", comment: "Label for the title of the graph"))

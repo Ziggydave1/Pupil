@@ -63,13 +63,15 @@ struct GeneralScheduleListItemView: View {
                 .foregroundColor(.gray)
         }
         .contextMenu {
-            GiveAliasButton(showingSheet: $showingAliasChooser)
-            
-            if let aliasLink {
-                RemoveAliasLinkButton(link: aliasLink)
+            if PersistenceController.shared.enabled {
+                GiveAliasButton(showingSheet: $showingAliasChooser)
+                
+                if let aliasLink {
+                    RemoveAliasLinkButton(link: aliasLink)
+                }
+                
+                Divider()
             }
-            
-            Divider()
             
             EmailButtons(email: classListing.teacherEmail)
         }

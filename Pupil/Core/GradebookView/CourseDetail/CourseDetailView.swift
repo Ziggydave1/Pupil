@@ -152,12 +152,14 @@ struct CourseDetailView: View {
         .listStyle(.inset)
         .navigationTitle(alias?.name ?? course.title)
         .toolbar {
-            ToolbarItem(placement: .primaryAction) {
-                Menu(String(localized: "COURSE_EDIT_BUTTON", defaultValue: "Edit", comment: "Button to pull up the alias picker when wanting to customize a course")) {
-                    GiveAliasButton(showingSheet: $showAliasSheet)
-                    
-                    if let aliasLink {
-                        RemoveAliasLinkButton(link: aliasLink)
+            if PersistenceController.shared.enabled {
+                ToolbarItem(placement: .primaryAction) {
+                    Menu(String(localized: "COURSE_EDIT_BUTTON", defaultValue: "Edit", comment: "Button to pull up the alias picker when wanting to customize a course")) {
+                        GiveAliasButton(showingSheet: $showAliasSheet)
+                        
+                        if let aliasLink {
+                            RemoveAliasLinkButton(link: aliasLink)
+                        }
                     }
                 }
             }
