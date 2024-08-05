@@ -26,8 +26,14 @@ struct IDCardRowView: View {
             VStack (alignment: .leading) {
                 Text(info.formattedName)
                     .font(.title2)
-                Text(String(localized: "ID_CARD_ROW_SUBTITLE", defaultValue: "View ID Card", comment: "Subtitle for the id card row in settings"))
-                    .font(.footnote)
+                Text(
+                    String(
+                        localized: "ID_CARD_ROW_SUBTITLE",
+                        defaultValue: "View ID Card",
+                        comment: "Subtitle for the id card row in settings"
+                    )
+                )
+                .font(.footnote)
             }
         }
     }

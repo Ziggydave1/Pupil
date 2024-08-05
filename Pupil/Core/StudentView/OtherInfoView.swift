@@ -11,12 +11,13 @@ import SwiftVue
 struct OtherInfoView: View {
     let info: StudentInfo
     var body: some View {
-        ForEach(info.userDefinedGroupBoxes) { box in
-            Section {
-                ForEach(box.userDefinedItems) { item in
-                    StudentInfoRowView(image: "person.fill", color: .orange, name: item.itemLabel, value: item.value)
-                }
-            }
+        ForEach(info.userDefinedGroupBoxes.flatMap(\.userDefinedItems)) { item in
+            StudentInfoRowView(
+                image: "tag.fill",
+                color: .orange,
+                name: item.itemLabel,
+                value: item.value
+            )
         }
     }
 }

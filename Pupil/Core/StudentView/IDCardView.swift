@@ -49,7 +49,13 @@ struct IDCardView: View {
                     Text(info.formattedName)
                         .font(.title)
                         .fontWeight(.semibold)
-                    Text(String(localized: "ID_CARD_USER_GRADE", defaultValue: "Grade \(info.grade)", comment: "The current grade of the user"))
+                    Text(
+                        String(
+                            localized: "ID_CARD_USER_GRADE",
+                            defaultValue: "Grade \(info.grade)",
+                            comment: "The current grade of the user"
+                        )
+                    )
                 }
                 Spacer()
             }
@@ -60,11 +66,27 @@ struct IDCardView: View {
                 .frame(height: 8)
                 .foregroundColor(accentColor)
             
-            Picker(String(localized: "ID_CARD_TYPE_PICKER_TITLE", defaultValue: "ID type", comment: "Picker title for the ID card type (barcode or qr code)"), selection: $usingBarCode.animation(.spring)) {
-                Text(String(localized: "ID_CARD_BAR_CODE_TYPE", defaultValue: "Bar code", comment: "The bar code type of id card display"))
-                    .tag(true)
-                Text(String(localized: "ID_CARD_QR_CODE_TYPE", defaultValue: "QR code", comment: "The qr code type of id card display"))
-                    .tag(false)
+            Picker(String(
+                localized: "ID_CARD_TYPE_PICKER_TITLE",
+                defaultValue: "ID type",
+                comment: "Picker title for the ID card type (barcode or qr code)"
+            ), selection: $usingBarCode.animation(.spring)) {
+                Text(
+                    String(
+                        localized: "ID_CARD_BAR_CODE_TYPE",
+                        defaultValue: "Bar code",
+                        comment: "The bar code type of id card display"
+                    )
+                )
+                .tag(true)
+                Text(
+                    String(
+                        localized: "ID_CARD_QR_CODE_TYPE",
+                        defaultValue: "QR code",
+                        comment: "The qr code type of id card display"
+                    )
+                )
+                .tag(false)
             }
             .pickerStyle(.segmented)
             .padding(.horizontal)
@@ -100,8 +122,16 @@ struct IDCardView: View {
         .frame(maxWidth: 450)
         .safeAreaInset(edge: .bottom) {
             if let customIDPhoto, let _ = UIImage(data: customIDPhoto) {
-                let showOriginalPhotoText = String(localized: "ID_CARD_SHOW_ORIGINAL_PHOTO_BUTTON", defaultValue: "Show original photo", comment: "Button to show the original id card photo")
-                let showCustomPhotoText = String(localized: "ID_CARD_SHOW_CUSTOM_PHOTO_BUTTON", defaultValue: "Show custom photo", comment: "Button to show the custom id card photo")
+                let showOriginalPhotoText = String(
+                    localized: "ID_CARD_SHOW_ORIGINAL_PHOTO_BUTTON",
+                    defaultValue: "Show original photo",
+                    comment: "Button to show the original id card photo"
+                )
+                let showCustomPhotoText = String(
+                    localized: "ID_CARD_SHOW_CUSTOM_PHOTO_BUTTON",
+                    defaultValue: "Show custom photo",
+                    comment: "Button to show the custom id card photo"
+                )
                 Button(showingCustomPhoto ? showOriginalPhotoText : showCustomPhotoText) {
                     showingCustomPhoto.toggle()
                 }
