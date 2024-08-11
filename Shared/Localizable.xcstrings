@@ -221,9 +221,6 @@
         }
       }
     },
-    "Attendance" : {
-
-    },
     "ATTENDANCE_NAV_TITLE" : {
       "comment" : "Navigation title for the attendance page",
       "extractionState" : "extracted_with_value",
